@@ -1,0 +1,108 @@
+.big-box{
+  display: flex;
+}
+
+.box {
+  border: 2px solid #1e1e1e;
+  border-top: none;
+}
+
+.col{
+  border: 2px solid #1e1e1e;
+  border-top: none;
+  border-right: none;
+  margin: 0px;
+  padding: 0;
+} 
+
+
+/* LEFT BOX */
+.title-container{
+  padding: 20px 0 20px 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.title{
+  margin: 0 50px 0 50px;
+}
+
+.line{
+  border: 3px solid black;
+  width: 246px; /* Adjust the width of the line */
+  height: 100%; /* Ensure the line spans the entire height */
+  background-color: black; /* Adjust color as needed */
+  margin-left: 50px; 
+}
+
+.line-2{
+  width: 392px;
+  margin: 0 50px 0 0;
+}
+
+.img-andi{
+  margin: 69px 77px 69px 77px ;
+  border: 2px solid black;
+}
+/* LEFT BOX */
+
+/* MIDDLE BOX */
+.middle{
+  border-left: none;
+}
+
+.about-content{
+  margin: 50px;
+}
+
+.skills{
+  display: flex;
+  margin: 50px;
+}
+
+.desc-title{
+  margin-right: 42px;
+}
+
+ul{
+  list-style: none;
+}
+
+.here-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-here{
+  margin: 0 50px 20px 50px;
+  text-align: center;
+}
+
+.go-button{
+  margin: 0 50px 0 50px;
+}
+
+button{
+  width: 100%;
+  background: #630000;
+  color: white;
+}
+
+.year-born{
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.gapping{
+  width: 50%;
+}
+
+.rock-left{
+  text-align: right;
+}
+
+/* MIDDLE BOX */
+
+
