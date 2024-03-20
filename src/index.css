@@ -14,7 +14,7 @@
   font-size: 14px;
 }
 
-.desc-title{
+.desc-title, p{
   font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
   font-style: normal;

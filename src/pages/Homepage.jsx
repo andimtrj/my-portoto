@@ -2,6 +2,8 @@ import "../style/home.css";
 import Image from "react-bootstrap/Image";
 import ImageAndi from "../assets/img-andi.png";
 import ImageHere from "../assets/img-here.png";
+import ImageTrex from "../assets/img-trex.png";
+import ImageShoe from "../assets/img-shoe.png";
 
 function Home(params) {
   return (
@@ -56,7 +58,7 @@ function Home(params) {
             </div>
           </div>
 
-          <div className="col middle">
+          <div className="col content-middle">
             <div className="skills">
               <div className="desc-title">[SKILLS]</div>
               <div className="desc-title">
@@ -69,18 +71,15 @@ function Home(params) {
                   <li>REACT JS</li>
                   <li>BOOTSTRAP</li>
                   <li>TAILWIND</li>
-                  <li>CSS</li>
                 </ul>
               </div>
             </div>
 
-            <div here-container>
-              <div className="img-here">
-                <Image src={ImageHere} />
-              </div>
+            <div className="img-here-container">
+              <Image src={ImageHere} className="img-here" />
             </div>
 
-            <div className="go-button">
+            <div className="skills button-container">
               <button className="desc-title">GO SEE MY WORKS</button>
             </div>
 
@@ -93,12 +92,43 @@ function Home(params) {
 
         <div className="col right">
           <div className="navbar desc-title">
-            <div>ABOUT</div>
-            <div>PORTFOLIO</div>
-            <div>CONTACT</div>
+            <div>
+              <a href="">ABOUT</a>
+            </div>
+            <div>
+              <a href="">PORTFOLIO</a>
+            </div>
+            <div>
+              <a href="">CONTACT</a>
+            </div>
           </div>
-        </div>
 
+          <div className="img-right">
+            <Image src={ImageShoe} />
+          </div>
+
+          <div className="img-right">
+            <Image src={ImageTrex} />
+          </div>
+
+          <div className="contact-container">
+              <div className="skills contact-content">
+                <p>[EMAIL]</p>
+                <p className="underlined">amataraja@gmail.com</p>
+              </div>
+              <div className="skills contact-content contact-content2">
+                <p>[SOCIAL]</p>
+                <p>
+                  <a href="" >IG</a>
+                  <a href="">YT</a>
+                  <a href="">LI</a>
+                  <a href="">GH</a>   
+                </p>
+              </div>
+          </div>
+
+
+        </div>
       </div>
     </>
   );
