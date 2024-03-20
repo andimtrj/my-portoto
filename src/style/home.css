@@ -1,10 +1,14 @@
 .big-box{
   display: flex;
+  height: 100vh;
+  width: 100%;
 }
 
 .box {
   border: 2px solid #1e1e1e;
   border-top: none;
+  height: 100vh;
+  width: auto;
 }
 
 .col{
@@ -17,52 +21,71 @@
 
 
 /* LEFT BOX */
+.left{
+  width: 50%; 
+}
+
 .title-container{
-  padding: 20px 0 20px 0;
-  display: flex;
+  /* padding: 20px 0 20px 0; */
+  display: inline-flex;
   align-items: center;
   width: 100%;
+  height: auto;
+  gap: 10px;
+  padding: 0 20px 0 20px;
 }
 
 .title{
-  margin: 0 50px 0 50px;
+  white-space: nowrap;
+  width: auto;
 }
 
 .line{
   border: 3px solid black;
-  width: 246px; /* Adjust the width of the line */
-  height: 100%; /* Ensure the line spans the entire height */
-  background-color: black; /* Adjust color as needed */
-  margin-left: 50px; 
+  flex-grow: 1;
+  width: 100px; 
+  background-color: black;
 }
 
-.line-2{
-  width: 392px;
-  margin: 0 50px 0 0;
+
+.img-andi-container{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
 }
 
 .img-andi{
-  margin: 69px 77px 69px 77px ;
   border: 2px solid black;
+  width: 90%;
+  max-width: 100%;
 }
 /* LEFT BOX */
 
 /* MIDDLE BOX */
 .middle{
   border-left: none;
+  width: 25%;
+  height: 100vh;
+}
+
+.content-middle{
+  border-left: none;
+  border-right: none;
 }
 
 .about-content{
-  margin: 50px;
+  margin: 10px;
 }
 
 .skills{
   display: flex;
-  margin: 50px;
+  /* margin: 22px 20px 0 20px; */
 }
 
 .desc-title{
-  margin-right: 42px;
+  /* margin-right: 42px; */
 }
 
 ul{
@@ -70,18 +93,20 @@ ul{
 }
 
 .here-container{
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .img-here{
-  margin: 0 50px 20px 50px;
+  /* margin: 20px 50px 20px 50px; */
+  width: 10px;
   text-align: center;
 }
 
 .go-button{
-  margin: 0 50px 0 50px;
+  /* margin: 0 50px 0 50px; */
 }
 
 button{
@@ -91,18 +116,31 @@ button{
 }
 
 .year-born{
-  margin-top: 12px;
-  margin-bottom: 20px;
+  /* margin-top: 22px; */
+  /* margin-bottom: 20px; */
 }
 
 .gapping{
-  width: 50%;
+  /* width: 50%; */
 }
 
 .rock-left{
   text-align: right;
 }
-
 /* MIDDLE BOX */
+
+/* RIGHT SIDE */
+.right{
+  width: 25%;
+}
+
+.navbar{
+  display: flex;
+  margin-right: 0;
+}
+
+
+/* RIGHT SIDE */
+
 
 

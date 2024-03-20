@@ -7,22 +7,22 @@ function Home(params) {
   return (
     <>
       <div className="big-box">
-        <div className="box">
+        <div className="box left">
           <div className="title-container col">
             <div className="line"></div>
             <h1 className="title">Hello There</h1>
           </div>
-          <div className="col">
+          <div className="col img-andi-container">
             <Image src={ImageAndi} alt="big-image" className="img-andi" />
           </div>
           <div className="title-container col">
             <h1 className="title">I'm Andi</h1>
-            <div className="line line-2"></div>
+            <div className="line"></div>
           </div>
         </div>
 
         <div className="box middle">
-          <div className="col middle">
+          <div className="col content-middle">
             <div className="about-content">
               <h3 className="desc-title">[HELLO]</h3>
               <p className="desc">
@@ -90,6 +90,15 @@ function Home(params) {
             </div>
           </div>
         </div>
+
+        <div className="col right">
+          <div className="navbar desc-title">
+            <div>ABOUT</div>
+            <div>PORTFOLIO</div>
+            <div>CONTACT</div>
+          </div>
+        </div>
+
       </div>
     </>
   );
