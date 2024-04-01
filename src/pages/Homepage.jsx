@@ -6,6 +6,7 @@ import HomeUnder from "../assets/home-under.png";
 
 function Home(params) {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
   const toggleMenu = () => {
     setIsNavbarOpen(!isNavbarOpen);
   };
@@ -31,8 +32,15 @@ function Home(params) {
           </span>
           {/* <span class="material-icons text-[60px]">close</span> */}
         </nav>
+        <div className={`${isNavbarOpen ? "block" : "hidden"} `}>
+            <div className="bg-hitam absolute w-full">
+              <h1 className="title text-white">HOME</h1>
+              <h1 className="title text-white">ABOUT</h1>
+              <h1 className="title text-white">ABOUT</h1>
+            </div>
+        </div>
 
-        <div className="flex flex-col justify-center align-center text-center px-[250px] pt-[90px] relative">
+        <div className="flex flex-col justify-center align-center text-center px-[250px] pt-[90px] ">
           <div className="flex justify-center items-center">
             <h1 className="title m-0">Hello! It's me Andi</h1>
             <div className="w-[100px] h-[100px] rounded-full flex items-center justify-center overflow-hidden">
