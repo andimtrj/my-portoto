@@ -1,133 +1,48 @@
 import "../style/home.css";
 import Image from "react-bootstrap/Image";
-import ImageAndi from "../assets/img-andi.png";
-import ImageHere from "../assets/img-here.png";
-import ImageTrex from "../assets/img-trex.png";
-import ImageShoe from "../assets/img-shoe.png";
+import HeyAndi from "../assets/hey-andi-final.png";
+import HomeUnder from "../assets/home-under.png";
 
 function Home(params) {
   return (
     <>
-      <div className="big-box">
-        <div className="box left">
-          <div className="title-container col">
-            <div className="line"></div>
-            <h1 className="title">Hello There</h1>
+      <div className="absolute bottom-0 flex justify-center items-center">
+        <Image src={HomeUnder} className="w-[95%]" />
+      </div>
+      
+      <div className="p-10 flex flex-col w-full h-full">
+        <nav className="flex flex-row justify-between">
+          <div className="w-[48px] h-[48px] bg-blue-500 rounded-full flex items-center justify-center">
+            <span className="text-white"></span>
           </div>
-          <div className="col img-andi-container">
-            <Image src={ImageAndi} alt="big-image" className="img-andi" />
-          </div>
-          <div className="title-container col">
-            <h1 className="title">I'm Andi</h1>
-            <div className="line"></div>
-          </div>
-        </div>
+          <span className="material-icons text-[48px]">menu</span>
+        </nav>
 
-        <div className="box middle">
-          <div className="col content-middle">
-            <div className="about-content">
-              <h3 className="desc-title">[HELLO]</h3>
-              <p className="desc">
-                Visitors! Welcome to my little corner of the web! Call me Andi
-                and thanks for visiting my website. Sit back, fasten your
-                seatbelt, and enjoy your exploration on my website.
-              </p>
-            </div>
-            <div className="about-content">
-              <h3 className="desc-title">[MAY I INTRODUCE MY SELF?]</h3>
-              <p className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Aliquam faucibus purus in massa. Urna id volutpat lacus laoreet
-                non curabitur gravida arcu ac. Eu scelerisque felis imperdiet
-                proin fermentum leo vel. Aliquam sem fringilla ut morbi
-                tincidunt augue. Etiam non quam lacus suspendisse faucibus
-                interdum posuere. Sit amet nulla facilisi morbi tempus iaculis
-                urna.
-              </p>
-            </div>
-            <div className="about-content">
-              <h3 className="desc-title">[WHAT CAN I DO FOR YOU]</h3>
-              <p className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Maecenas accumsan lacus vel facilisis volutpat est velit egestas
-                dui. Mauris rhoncus aenean vel elit. Tempus urna et pharetra
-                pharetra massa massa.
-              </p>
-            </div>
-          </div>
-
-          <div className="col content-middle">
-            <div className="skills">
-              <div className="desc-title">[SKILLS]</div>
-              <div className="desc-title">
-                <ul>
-                  <li>FIGMA</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JAVASCRIPT</li>
-                  <li>LARAVEL</li>
-                  <li>REACT JS</li>
-                  <li>BOOTSTRAP</li>
-                  <li>TAILWIND</li>
-                </ul>
+        <div className="flex flex-col justify-center align-center text-center px-[250px] pt-32 relative">
+          <div className="flex justify-center items-center">
+            <h1 className="title m-0">Hello! It's me Andi</h1>
+            <div className="w-[100px] h-[100px] rounded-full flex items-center justify-center overflow-hidden">
+              <div className="relative pt-[12px]">
+                <Image
+                  src={HeyAndi}
+                  alt="hey-andi-final-png"
+                  className="w-[100%] h-[100%] object-cover"
+                />
               </div>
             </div>
-
-            <div className="img-here-container">
-              <Image src={ImageHere} className="img-here" />
-            </div>
-
-            <div className="skills button-container">
-              <button className="desc-title">GO SEE MY WORKS</button>
-            </div>
-
-            <div className="skills year-born desc-title">
-              <div className="gapping">2023</div>
-              <div className="gapping rock-left">STILL ROCKIN'</div>
-            </div>
           </div>
-        </div>
-
-        <div className="col right">
-          <div className="navbar desc-title">
-            <div>
-              <a href="">ABOUT</a>
-            </div>
-            <div>
-              <a href="">PORTFOLIO</a>
-            </div>
-            <div>
-              <a href="">CONTACT</a>
-            </div>
+          <div className="px-[100px] mb-3">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              quae itaque in. Quisquam blanditiis excepturi molestias eveniet
+              commodi culpa inventore quo.
+            </p>
           </div>
-
-          <div className="img-right">
-            <Image src={ImageShoe} />
+          <div>
+            <button class="border-2 border-hitam py-2 px-8 rounded-full text-[15px] hover:bg-hitam hover:text-putih transition-color duration-300">
+              About Me
+            </button>
           </div>
-
-          <div className="img-right">
-            <Image src={ImageTrex} />
-          </div>
-
-          <div className="contact-container">
-              <div className="skills contact-content">
-                <p>[EMAIL]</p>
-                <p className="underlined">amataraja@gmail.com</p>
-              </div>
-              <div className="skills contact-content contact-content2">
-                <p>[SOCIAL]</p>
-                <p>
-                  <a href="" >IG</a>
-                  <a href="">YT</a>
-                  <a href="">LI</a>
-                  <a href="">GH</a>   
-                </p>
-              </div>
-          </div>
-
-
         </div>
       </div>
     </>
