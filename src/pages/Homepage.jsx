@@ -1,24 +1,38 @@
 import "../style/home.css";
+import { useState } from "react";
 import Image from "react-bootstrap/Image";
 import HeyAndi from "../assets/hey-andi-final.png";
 import HomeUnder from "../assets/home-under.png";
 
 function Home(params) {
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsNavbarOpen(!isNavbarOpen);
+  };
+
   return (
     <>
       <div className="absolute bottom-0 flex justify-center items-center">
-        <Image src={HomeUnder} className="w-[95%]" />
+        <Image src={HomeUnder} className="w-[85%]" />
       </div>
-      
+
       <div className="p-10 flex flex-col w-full h-full">
         <nav className="flex flex-row justify-between">
-          <div className="w-[48px] h-[48px] bg-blue-500 rounded-full flex items-center justify-center">
+          <div className="w-[60px] h-[60px] bg-blue-500 rounded-full flex items-center justify-center">
             <span className="text-white"></span>
           </div>
-          <span className="material-icons text-[48px]">menu</span>
+          <span
+            className={`material-icons text-[60px] hover:text-blue-400 cursor-pointer transition-all duration-300 transform ${
+              isNavbarOpen ? "rotate-90" : ""
+            }`}
+            onClick={toggleMenu}
+          >
+            {isNavbarOpen ? "close" : "menu"}
+          </span>
+          {/* <span class="material-icons text-[60px]">close</span> */}
         </nav>
 
-        <div className="flex flex-col justify-center align-center text-center px-[250px] pt-32 relative">
+        <div className="flex flex-col justify-center align-center text-center px-[250px] pt-[90px] relative">
           <div className="flex justify-center items-center">
             <h1 className="title m-0">Hello! It's me Andi</h1>
             <div className="w-[100px] h-[100px] rounded-full flex items-center justify-center overflow-hidden">
