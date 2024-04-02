@@ -6,15 +6,16 @@
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 90px;
+  font-size: 5.625rem;
 }
+
 
 .desc{
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .desc-title, p{
