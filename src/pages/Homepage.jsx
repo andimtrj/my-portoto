@@ -1,17 +1,36 @@
 import Navbar from "../components/Navbar.jsx";
+import { motion, useAnimation } from "framer-motion";
+import { useState, useEffect } from "react";
 import CursorFollow from "../components/CursorFollow.jsx";
 import Image from "react-bootstrap/Image";
 import HeyAndi from "../assets/hey-andi.png";
-import HomeUnder from "../assets/home-under.png";
 
 function Home(params) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleHoverStart = () => {
+    setIsHovered(true);
+  };
+
+  const handleHoverEnd = () => {
+    setIsHovered(false);
+  };
+
+
   return (
     <>
-      <CursorFollow />
+      <CursorFollow isHovered={isHovered} />
       <Navbar />
       <div className="flex flex-col justify-center align-center text-center px-64 pt-32">
         <div className="flex justify-center items-center">
-          <h1 className="title mr-2">Andi Mataraja</h1>
+          <h1
+            className="title mr-2 hover-object"
+            onMouseEnter={handleHoverStart}
+            onMouseLeave={handleHoverEnd}
+            style={{ color: isHovered ? '#FFF' : '#000' }}
+          >
+            Andi Mataraja
+          </h1>
           <Image
             src={HeyAndi}
             alt="hey-andi-final-png"

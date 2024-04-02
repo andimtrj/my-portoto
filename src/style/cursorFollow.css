@@ -1,10 +1,11 @@
-.cursor {
-    background-color: #111;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
+.custom-cursor {
+  width: 16px; /* Customize the size of the cursor */
+  height: 16px; /* Customize the size of the cursor */
+  background-color: #000; /* Customize the color of the cursor */
+  border-radius: 50%;
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
 }
+
+
