@@ -1,0 +1,9 @@
+.menu-shadow:hover{
+  text-shadow:  1px 0px 10px rgba(245,28,32,0.71);
+  color: #F51C20;
+}
+
+.menu-shadow{
+  transition: text-shadow 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
