@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "../style/navbar.css";
 
-function Navbar(params) {
+function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
 
   const toggleMenu = () => {
     setIsNavbarOpen(!isNavbarOpen);
@@ -33,12 +34,12 @@ function Navbar(params) {
 
       <nav className="flex px-10 pt-10">
         <div className="flex flex-row justify-between w-full">
-        <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
-          <span className="text-white"></span>
+        <div className="w-[3rem] h-[3rem] bg-blue-500 rounded-full flex items-center justify-center">
+          <span className="text-white">Logo</span>
         </div>
 
         <span
-          className={`material-icons text-merah text-[4rem] hover_text cursor-pointer transition-all duration-300 transform ${
+          className={`material-icons text-merah text-[3rem] hover_text cursor-pointer transition-all duration-300 transform ${
             isNavbarOpen ? "rotate-90" : ""
           }`}
           onClick={toggleMenu}
@@ -46,7 +47,6 @@ function Navbar(params) {
           {isNavbarOpen ? "close" : "menu"}
         </span>
         </div>
-        
       </nav>
     </>
   );
