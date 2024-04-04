@@ -1,48 +1,69 @@
-import "../style/cursorFollow.css";
-import { useState, useEffect } from "react";
-import { useMotionValue, motion, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
-function Cursor({ isHovered, handleHoverStart, handleHoverEnd }) {
-  const cursorX = useMotionValue(-100);
-  const cursorY = useMotionValue(-100);
+("use client");
 
-  useEffect(() => {
-    const moveCursor = (e) => {
-      setTimeout(() => {
-        cursorX.set(e.clientX - 8); // Adjust cursor size and position
-        cursorY.set(e.clientY - 8); // Adjust cursor size and position
-      }, 50);
+function Cursor({ isHovered, isNavbarOpen }) {
+  const size = isHovered ? 250 : 30;
+  const color = isNavbarOpen ? '#EC2031' : '#bce4f2';
+  const circle = useRef();
+
+  const mouse = useRef({
+    x: 0,
+    y: 0
+  });
+
+  const delayedMouse = useRef({
+    x: 0,
+    y: 0
+  });
+
+  const manageMouseMove = e => {
+    const { clientX, clientY } = e;
+    mouse.current = {
+      x: clientX,
+      y: clientY
+    };
+  };
+
+  const lerp = (x, y, a) => x * (1 - a) + y * a;
+
+  const moveCircle = (x, y) => {
+    gsap.set(circle.current, { x, y, xPercent: -50, yPercent: -50 });
+  };
+
+  const animate = () => {
+    const { x, y } = delayedMouse.current;
+
+    delayedMouse.current = {
+      x: lerp(x, mouse.current.x, 0.075),
+      y: lerp(y, mouse.current.y, 0.075)
     };
 
-    document.addEventListener('mousemove', moveCursor);
-
-    return () => {
-      document.removeEventListener('mousemove', moveCursor);
-    };
-  }, [cursorX, cursorY]);
-
-  const cursorControls = useAnimation();
+    moveCircle(delayedMouse.current.x, delayedMouse.current.y);
+    window.requestAnimationFrame(animate);
+  };
 
   useEffect(() => {
-    if (isHovered) {
-      cursorControls.start({ scale: 1.5 }); // Scale up custom cursor
-    } else {
-      cursorControls.start({ scale: 1 }); // Reset custom cursor scale
-    }
-  }, [isHovered, cursorControls]);
+    animate();
+    window.addEventListener("mousemove", manageMouseMove);
+    return () => window.removeEventListener("mousemove", manageMouseMove);
+  }, []);
 
   return (
-    <motion.div
-      className="custom-cursor"
-      style={{
-        translateX: cursorX,
-        translateY: cursorY,
-        backgroundColor: isHovered ? '#000' : '#FFF'
-      }}
-      animate={cursorControls}
-    />
+    <>
+      <div
+        ref={circle}
+        className={`fixed top-0 left-0 rounded-full mix-blend-difference pointer-events-none ${isHovered ? 'blur-lg' : 'blue-none'} `}
+        style={{
+          backgroundColor: color,
+          width: size,
+          height: size,
+          transition: 'height 0.3s ease-out, width 0.3s ease-out, filter 0.3s ease-out'
+        }}
+      ></div>
+    </>
   );
-
 }
 
 export default Cursor;
