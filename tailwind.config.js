@@ -10,7 +10,7 @@ export default {
       ...colors,
       'putih':'#F5F5F5',
       'hitam': '#101010',
-      'merah': '#F51C20'
+      'merah': '#EC2031'
     },
     extend: {},
   },
