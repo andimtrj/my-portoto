@@ -1,84 +1,103 @@
-import { useState, useRef, useEffect } from "react";
+// Navbar.jsx
+import { useState, useEffect } from "react";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import { Expo } from "gsap";
 import "../style/navbar.css";
 
 function Navbar() {
-  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsNavbarOpen(!isNavbarOpen);
-  };
+  var tl = gsap.timeline({
+    paused: true
+  });
 
   useEffect(() => {
-    const tl = gsap.timeline({ paused: true });
-    tl.to(".navbar-container", {
-      duration: 0.3,
-      y: isNavbarOpen ? 0 : 100,
-      autoAlpha: isNavbarOpen ? 1 : 0,
-      height: isNavbarOpen ? "100vh" : 0,
-      ease: "power2.inOut"
-    }).reversed(!isNavbarOpen)
+    tl.to(".menu", {
+      duration: 1,
+      x: "0%",
+      ease: Expo.easeInOut
+    })
+      .fromTo(
+        ".li",
+        {
+          y: "-100%",
+          opacity: 0
+        },
+        {
+          duration: 0.5,
+          opacity: 1,
+          y: "0%",
+          stagger: 0.25
+        }
+      )
+      .fromTo(
+        ".social-li",
+        {
+          y: "-50%",
+          opacity: 0
+        },
+        {
+          duration: 0.8,
+          opacity: 1,
+          stagger: 0.25,
+          ease: Expo.easeOut
+        },
+        "-=0.5"
+      );
+  }, []);
 
-    return () => {
-      tl.kill()
-    }
-  }, [isNavbarOpen]);
+  function toggle() {
+    tl.play();
+  }
 
-  useEffect(() => {
-    const handleResize = () => {
-      if(!isNavbarOpen) return;
-      gsap.set(".navbar-container", {height: "100vh"})
-    }
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  },[isNavbarOpen])
-
-
+  function togglec() {
+    tl.reverse();
+  }
 
   return (
     <>
-      <div
-        className="navbar-container absolute w-full flex flex-col items-end overflow-hidden"
-        style={{
-          height: isNavbarOpen ? "100vh" : 0,
-          opacity: isNavbarOpen ? 1 : 0
-        }}
-      >
-        <div className="flex flex-col bg-hitam w-full h-full px-10 py-5">
-          <a href="" className="title text-putih hover:text-merah">
-            HOME
-          </a>
-          <a href="" className="title text-putih hover:text-merah ">
-            ABOUT
-          </a>
-          <a href="" className="title text-putih hover:text-merah ">
-            PORTFOLIO
-          </a>
-          <a href="" className="title text-putih hover:text-merah ">
-            CONTACT
-          </a>
+      <div className="navbar">
+        <div className="container">
+          <div className="button" onClick={toggle}>
+            menu
+          </div>
         </div>
-      </div>
-
-      <nav className="flex px-10 pt-10">
-        <div className="flex flex-row justify-between w-full">
-          <div className="w-[3rem] h-[3rem] bg-blue-500 rounded-full flex items-center justify-center">
-            <span className="text-white">Logo</span>
+        <div className="menu">
+          <div className="button" onClick={togglec}>
+            close
           </div>
 
-          <span
-            className={`material-icons text-merah text-[3rem] cursor-pointer transition-all duration-300 transform ${
-              isNavbarOpen ? "rotate-90" : ""
-            }`}
-            onClick={toggleMenu}
-          >
-            {isNavbarOpen ? "close" : "menu"}
-          </span>
+          <ul className="ul">
+            <li className="li1 li">
+              <a href="#">Home</a>
+            </li>
+            <li className="li2 li">
+              <a href="#">About</a>
+            </li>
+            <li className="li3 li">
+              <a href="#">Services</a>
+            </li>
+            <li className="li4 li">
+              <a href="#">Contact</a>
+            </li>
+            <div className="bg1 bg"></div>
+            <div className="bg2 bg"></div>
+            <div className="bg3 bg"></div>
+            <div className="bg4 bg"></div>
+          </ul>
+          <div className="social">
+            <ul>
+              <li className="social-li">
+                <a href="#">facebook</a>
+              </li>
+              <li className="social-li">
+                <a href="#">instagram</a>
+              </li>
+              <li className="social-li">
+                <a href="#">twitter</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </nav>
+      </div>
     </>
   );
 }
