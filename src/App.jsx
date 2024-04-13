@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
 // import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Home from './pages/Homepage'
+import Home from './pages/Home'
 
 
 function App() {
