@@ -30,7 +30,7 @@ const childVariants = {
 
 function Home() {
   return (
-    <>
+    <div className="relative">
       <Navbar />
       <motion.div className="flex flex-col justify-center items-center text-hitam" variants={containerVariants} initial="hidden" animate="visible">
         <motion.h1 className="title" variants={childVariants} >Hello! I'm Andi Mataraja</motion.h1>
@@ -40,7 +40,7 @@ function Home() {
           enjoy your exploration on my website.
         </motion.p>
       </motion.div>
-    </>
+    </div>
   );
 }
 
