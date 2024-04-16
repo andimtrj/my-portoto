@@ -1,8 +1,0 @@
-.menu{
-  transform: translateX(-100%)
-}
-
-.menu-item{
-  transform: translateY(-100%);
-  opacity: 0;
-}
