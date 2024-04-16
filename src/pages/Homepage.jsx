@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
       <div>
-        <Navbar  />
+        <Navbar />
         <div className="flex flex-col justify-center align-center text-center px-64 pt-32">
           <div className="flex justify-center items-center">
             <h1
@@ -46,7 +46,7 @@ function Home() {
             </button>
           </div>
         </div>
-        <CursorFollow isHovered={isHovered} />
+        <CursorFollow isHovered={isHovered}/>
       </div>
     </>
   );

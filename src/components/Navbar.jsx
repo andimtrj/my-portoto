@@ -1,101 +1,64 @@
 // Navbar.jsx
 import { useState, useEffect } from "react";
-import gsap from "gsap";
-import { Expo } from "gsap";
+import gsap, { Power1 } from "gsap";
 import "../style/navbar.css";
+import CursorFollow from "./CursorFollow.jsx"
 
 function Navbar() {
-  var tl = gsap.timeline({
-    paused: true
-  });
+  const [tl, setTl] = useState(null);
+  const [navHovered, setNavHovered] = useState(false);
+
 
   useEffect(() => {
-    tl.to(".menu", {
-      duration: 1,
-      x: "0%",
-      ease: Expo.easeInOut
-    })
-      .fromTo(
-        ".li",
-        {
-          y: "-100%",
-          opacity: 0
-        },
-        {
-          duration: 0.5,
-          opacity: 1,
-          y: "0%",
-          stagger: 0.25
-        }
-      )
-      .fromTo(
-        ".social-li",
-        {
-          y: "-50%",
-          opacity: 0
-        },
-        {
-          duration: 0.8,
-          opacity: 1,
-          stagger: 0.25,
-          ease: Expo.easeOut
-        },
-        "-=0.5"
+    const timeline = gsap.timeline({ paused: true });
+    timeline
+      .to(".menu", { x: "0%", duration: 1, ease: Power1.easeOut }, 0)
+      .to(
+        ".menu-item",
+        { y: "0%", ease: Power1.easeOut, stagger: 0.3, opacity: 1 },
+        "-=1"
       );
-  }, []);
+    setTl(timeline);
+  }, []); //
 
   function toggle() {
-    tl.play();
+    if (tl) {
+      tl.play();
+    }
   }
 
-  function togglec() {
-    tl.reverse();
+  function toggleClose() {
+    if (tl) {
+      tl.reverse();
+    }
   }
 
   return (
     <>
-      <div className="navbar">
-        <div className="container">
-          <div className="button" onClick={toggle}>
-            menu
-          </div>
-        </div>
-        <div className="menu">
-          <div className="button" onClick={togglec}>
-            close
-          </div>
+      <CursorFollow navHovered={navHovered}/>
+      <div className="navbar flex justify-end align-end pt-10 pe-10">
+        <h1 className="cursor-pointer" onClick={toggle} onMouseEnter={() => {setNavHovered(true)}}>
+          Menu
+        </h1>
+      </div>
 
-          <ul className="ul">
-            <li className="li1 li">
-              <a href="#">Home</a>
-            </li>
-            <li className="li2 li">
-              <a href="#">About</a>
-            </li>
-            <li className="li3 li">
-              <a href="#">Services</a>
-            </li>
-            <li className="li4 li">
-              <a href="#">Contact</a>
-            </li>
-            <div className="bg1 bg"></div>
-            <div className="bg2 bg"></div>
-            <div className="bg3 bg"></div>
-            <div className="bg4 bg"></div>
-          </ul>
-          <div className="social">
-            <ul>
-              <li className="social-li">
-                <a href="#">facebook</a>
-              </li>
-              <li className="social-li">
-                <a href="#">instagram</a>
-              </li>
-              <li className="social-li">
-                <a href="#">twitter</a>
-              </li>
-            </ul>
-          </div>
+      <div className="menu bg-hitam text-putih w-full h-[100vh] absolute top-0 p-10">
+        <div className="flex justify-end align-end">
+          <h1 className="cursor-pointer" onClick={toggleClose}>
+            Close
+          </h1>
+        </div>
+
+        <div className="flex flex-col gap-3 title px-10">
+          <a href="" className="menu-item">
+            Home
+          </a>
+          <a href="" className="menu-item">
+            Portfolio
+          </a>
+          <a href="" className="menu-item">
+            About
+          </a>
         </div>
       </div>
     </>

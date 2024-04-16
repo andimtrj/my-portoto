@@ -1,11 +1,12 @@
+// CursorFollow.jsx
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 ("use client");
 
-function Cursor({ isHovered, isNavbarOpen }) {
+function Cursor({ isHovered, navHovered }) {
   const size = isHovered ? 250 : 30;
-  const color = isNavbarOpen ? '#EC2031' : '#bce4f2';
+  const sizeNav = navHovered ? 70 : 30;
   const circle = useRef();
 
   const mouse = useRef({
@@ -56,7 +57,7 @@ function Cursor({ isHovered, isNavbarOpen }) {
         ref={circle}
         className={`fixed top-0 left-0 rounded-full mix-blend-difference pointer-events-none ${isHovered ? 'blur-lg' : 'blue-none'} `}
         style={{
-          backgroundColor: color,
+          backgroundColor: '#F5F5F5',
           width: size,
           height: size,
           transition: 'height 0.3s ease-out, width 0.3s ease-out, filter 0.3s ease-out'
