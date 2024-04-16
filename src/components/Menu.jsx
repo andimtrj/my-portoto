@@ -3,7 +3,7 @@ import { AnimatePresence, motion, stagger } from "framer-motion";
 const menuVariants = {
   hidden: {
     opacity: 0,
-    y: -200,
+    y: '-100vh',
     transition: {
       ease: "easeOut",
       duration: 0.3,
@@ -18,7 +18,7 @@ const menuVariants = {
     transition: {
       ease: "easeOut",
       duration: 0.5,
-      staggerChildren: 0.1,
+      staggerChildren: 0.2,
     },
   },
 };
@@ -26,7 +26,7 @@ const menuVariants = {
 const childVariants = {
   hidden: {
     opacity: 0,
-    y: 50,
+    y: -50,
     transition: {
       duration: 0.5,
       ease: 'easeIn'  // Defines how the child exits (ease in for exit here)
@@ -49,7 +49,7 @@ function Menu() {
       initial="hidden"
       animate="visible"
       exit="hidden"
-      className="flex flex-col inset-0 h-full w-full bg-hitam fixed p-20 items-center"
+      className="flex flex-col inset-0 h-full w-full bg-hitam fixed p-20 justify-center"
     >
       <motion.h1 variants={childVariants} className="title text-putih">Home</motion.h1>
       <motion.h1 variants={childVariants} className="title text-putih">About</motion.h1>

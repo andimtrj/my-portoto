@@ -21,7 +21,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between items-center p-9 relative">
+    <nav className="flex justify-between items-center p-9">
       <h2 className="desc-title">Andi Mataraja</h2>
       <motion.span
         variants={burgerVariants}

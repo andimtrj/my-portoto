@@ -30,9 +30,9 @@ const childVariants = {
 
 function Home() {
   return (
-    <div className="relative">
-      <Navbar />
-      <motion.div className="flex flex-col justify-center items-center text-hitam" variants={containerVariants} initial="hidden" animate="visible">
+    <div className="relative flex flex-col justify-center">
+    <Navbar />
+      <motion.div className="flex flex-col justify-center items-center text-hitam h-[60vh]" variants={containerVariants} initial="hidden" animate="visible">
         <motion.h1 className="title" variants={childVariants} >Hello! I'm Andi Mataraja</motion.h1>
         <motion.p className="desc-title text-center max-w-4xl" variants={childVariants}>
           Visitors! Welcome to my little corner of the web! Call me Andi and
