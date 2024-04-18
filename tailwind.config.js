@@ -8,9 +8,10 @@ export default {
   theme: {
     colors:{
       ...colors,
-      'putih':'#F5F5F5',
-      'hitam': '#101010',
-      'merah': '#EC2031'
+      'putih':'#FEFBF6',
+      'hitam': '#1e1e1e',
+      'coklatT': '#ECB159',
+      'coklatG': '#B67352'
     },
     extend: {},
   },

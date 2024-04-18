@@ -21,14 +21,12 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between items-center p-9">
-      <h2 className="desc-title">Andi Mataraja</h2>
+    <nav className="flex justify-between items-center px-9 pt-9">
+      <h2 className={`desc-title`}>Andi Mataraja</h2>
       <motion.span
         variants={burgerVariants}
         whileTap="tap"
-        className={`material-symbols-outlined text-5xl  cursor-pointer z-50 ${
-          showMenu ? "text-putih" : "text-hitam"
-        }`}
+        className={`material-symbols-outlined text-5xl cursor-pointer`}
         onClick={toggleMenu}
       >
         menu
