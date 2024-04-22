@@ -1,26 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .title{
-  font-family: "Crimson Pro", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
   font-style: normal;
-  font-size: 130px;
+  font-size: 5.625rem;
 }
+
 
 .desc{
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
-.desc-title{
-  font-family: "IBM Plex Mono", monospace;
+.desc-title, p{
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 15px;
 }
 
 body{
-  background-color: #eeebdd;
+  background-color: #FEFBF6;
+  color: #1e1e1e;
 }
