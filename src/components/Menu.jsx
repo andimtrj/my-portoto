@@ -28,8 +28,7 @@ const childVariants = {
     opacity: 0,
     y: -50,
     transition: {
-      delay: 0.7,
-      duration: 0.4,
+      duration: 0.2,
       ease: "easeIn" // Defines how the child exits (ease in for exit here)
     }
   },
@@ -37,7 +36,6 @@ const childVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.7,
       duration: 0.5,
       ease: "easeOut" // Defines how the child enters (ease out for entrance here)
     }
@@ -50,7 +48,7 @@ const closeButton = {
     opacity: 0,
     rotate: 360,
     transition: {
-      duration: 1,
+      duration: 0.2,
       ease: "easeOut"
     }
   },
@@ -76,7 +74,7 @@ function Menu({ showMenu, setShowMenu }) {
       initial="hidden"
       animate="visible"
       exit="hidden"
-      className="flex flex-col inset-0 h-full w-full bg-hitam fixed justify-center items-center"
+      className="flex flex-col inset-0 h-full w-full bg-hitam fixed justify-center items-center z-10"
     >
       <motion.span
         className="absolute material-symbols-outlined text-5xl cursor-pointer text-putih top-9 right-9"
