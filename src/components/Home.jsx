@@ -1,5 +1,5 @@
-import { AnimatePresence, motion, stagger } from "framer-motion";
-import Navbar from "../components/Navbar.jsx";
+import { motion } from "framer-motion";
+import Navbar from "./Navbar.jsx";
 
 const containerVariants = {
   hidden: {
@@ -28,10 +28,11 @@ const childVariants = {
   },
 };
 
-function Home() {
+function Home({showHome}) {
+  
+
   return (
-    <div className="relative flex flex-col justify-center">
-      <Navbar />
+    <div className={`relative flex flex-col justify-center ${showHome ? "" : "hidden"}`}>
       <motion.div
         className="flex flex-col justify-center items-center h-[80vh]"
         variants={containerVariants}

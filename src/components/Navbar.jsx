@@ -11,23 +11,23 @@ const burgerVariants = {
   },
 };
 
-
-
-function Navbar() {
-  const [showMenu, setShowMenu] = useState(false);
+function Navbar({setShowHome, setShowMenu, showMenu}) {
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
+    setShowHome(!showMenu);
   };
 
   return (
-    <nav className="flex justify-between items-center px-9 pt-9">
+    <nav className={`flex justify-between items-center px-9 pt-9 ${showMenu ? "hidden" : ""}`}>
       <h2 className={`desc-title`}>Andi Mataraja</h2>
       <motion.span
         variants={burgerVariants}
         whileTap="tap"
         className={`material-symbols-outlined text-5xl cursor-pointer`}
         onClick={toggleMenu}
+        data-cursor-size="100px"
+        data-cursor-exclusion
       >
         menu
       </motion.span>
