@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Navbar from "./Navbar.jsx";
 
 const containerVariants = {
   hidden: {
@@ -28,11 +27,10 @@ const childVariants = {
   },
 };
 
-function Home({showHome}) {
-  
+function Home() {
 
   return (
-    <div className={`relative flex flex-col justify-center ${showHome ? "" : "hidden"}`}>
+    <div className="flex flex-col justify-center">
       <motion.div
         className="flex flex-col justify-center items-center h-[80vh]"
         variants={containerVariants}
@@ -42,7 +40,8 @@ function Home({showHome}) {
         <motion.h1 className="title inline-flex" variants={childVariants}>
           Hello! I'm
           <span
-            className="text-coklatT z-0"
+            className="text-coklatT"
+            data-cursor-stick="#stick-item"
             data-cursor-exclusion
             data-cursor-size="100px"
           >
