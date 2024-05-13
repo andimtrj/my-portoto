@@ -8,10 +8,12 @@ export default {
   theme: {
     colors:{
       ...colors,
-      'putih':'#FEFBF6',
+      'putih':'#FEFEFE',
       'hitam': '#1e1e1e',
       'coklatT': '#ECB159',
-      'coklatG': '#B67352'
+      'coklatG': '#B67352',
+      'oren': '#FA6906',
+      'biru': '#09C3F8'
     },
     extend: {},
   },

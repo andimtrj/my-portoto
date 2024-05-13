@@ -1,9 +1,8 @@
-import { Cursor } from "react-creative-cursor";
 import AnimatedCursor from "react-animated-cursor";
-import "react-creative-cursor/dist/styles.css";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import WorksPage from "./pages/WorksPage";
 
 function App() {
   return (
@@ -51,6 +50,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/workspage" element={<WorksPage />} />
         </Routes>
       </Router>
     </>

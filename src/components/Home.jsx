@@ -38,7 +38,7 @@ function Home() {
       >
         <motion.h1 className="title inline-flex" variants={childVariants}>
           Hello! I'm
-          <span className="text-coklatT nama-hover">‎ Andi Mataraja</span>
+          <span className="text-oren nama-hover">‎ Andi Mataraja</span>
         </motion.h1>
         <motion.p
           className="desc-title text-center max-w-4xl text-hitam"

@@ -86,7 +86,7 @@ nav {
       div {
         text-align: center;
         text-transform: capitalize;
-        font-size: 34px;
+        font-size: 50px;
       }
 
       &:hover {
@@ -99,14 +99,8 @@ nav {
   .contact {
     margin-top: 80px;
     display: flex;
-
-    h5 {
-      font-weight: normal;
-
-      &:first-of-type {
-        margin-right: 40px;
-      }
-    }
+    justify-content: center;
+    align-items: center;
   }
 }
 

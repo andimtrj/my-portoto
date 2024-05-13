@@ -1,34 +1,35 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 import "../style/navbar.scss";
-import { Cursor } from "react-creative-cursor";
 
 const MOBILE_NAV_ITEMS = [
   {
     id: 0,
     navTitle: "home",
+    route: '/'
   },
   {
     id: 1,
-    navTitle: "showreel",
+    navTitle: "my works",
+    route: '/workspage'
   },
   {
     id: 2,
-    navTitle: "services",
+    navTitle: "about me",
   },
   {
     id: 3,
-    navTitle: "about",
-  },
-  {
-    id: 4,
     navTitle: "contact",
   },
 ];
 
+const linkedInUrl = "https://www.linkedin.com/in/andi-mataraja/"
+
 function Navbar() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const navigate = useNavigate();
 
   const hideNavItemsVariant = {
     opened: {
@@ -113,6 +114,12 @@ function Navbar() {
     },
   };
 
+  const handleClick = (route) => {
+    // setMobileNavOpen(false);
+
+    navigate(route)
+  }
+
   return (
     <main>
       <motion.nav
@@ -146,13 +153,22 @@ function Navbar() {
           </motion.button>
           <motion.ul variants={ulVariant} className="text-putih">
             {MOBILE_NAV_ITEMS.map((navItem) => (
-              <motion.li whileTap={{ scale: 0.95 }} key={navItem.id}>
-                <motion.div variants={liVariant} className="nav-menu-hover">{navItem.navTitle}</motion.div>
+              <motion.li whileTap={{ scale: 0.95 }} key={navItem.id} onClick={() => handleClick(navItem.route)}>
+                <motion.div
+                  variants={liVariant}
+                  className="nav-menu-hover desc-title hover:italic"
+                >
+                  {navItem.navTitle}
+                </motion.div>
               </motion.li>
             ))}
           </motion.ul>
-          <motion.div variants={fadeInVariant} className="contact text-putih">
-            <h5>amataraja@gmail.com</h5>
+          <motion.div
+            variants={fadeInVariant}
+            className="contact text-putih desc gap-10"
+          >
+            <a className="cursor-default">amataraja@gmail.com</a>
+            <a href={linkedInUrl} className="no-underline hover:italic">LinkedIn</a>
           </motion.div>
         </motion.div>
       </motion.nav>
