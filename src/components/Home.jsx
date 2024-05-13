@@ -28,7 +28,6 @@ const childVariants = {
 };
 
 function Home() {
-
   return (
     <div className="flex flex-col justify-center">
       <motion.div
@@ -39,14 +38,7 @@ function Home() {
       >
         <motion.h1 className="title inline-flex" variants={childVariants}>
           Hello! I'm
-          <span
-            className="text-coklatT"
-            data-cursor-stick="#stick-item"
-            data-cursor-exclusion
-            data-cursor-size="100px"
-          >
-            ‎ Andi Mataraja
-          </span>
+          <span className="text-coklatT nama-hover">‎ Andi Mataraja</span>
         </motion.h1>
         <motion.p
           className="desc-title text-center max-w-4xl text-hitam"

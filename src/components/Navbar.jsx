@@ -129,11 +129,10 @@ function Navbar() {
           <motion.div
             variants={hideNavItemsVariant}
             onClick={() => setMobileNavOpen(true)}
-            data-cursor-size="100px"
-            data-cursor-exclusion
-            data-cursor-stick="#stick-item"
           >
-            <span className="text-4xl material-symbols-outlined text-hitam">menu</span>
+            <span className="text-4xl material-symbols-outlined text-hitam">
+              menu
+            </span>
           </motion.div>
         </div>
         <motion.div variants={mobileMenuVariant} className="mobile-menu">
@@ -141,18 +140,19 @@ function Navbar() {
             variants={fadeInVariant}
             onClick={() => setMobileNavOpen(false)}
           >
-            <span className="text-4xl material-symbols-outlined text-putih">close</span>
+            <span className="text-4xl material-symbols-outlined text-putih">
+              close
+            </span>
           </motion.button>
           <motion.ul variants={ulVariant} className="text-putih">
             {MOBILE_NAV_ITEMS.map((navItem) => (
               <motion.li whileTap={{ scale: 0.95 }} key={navItem.id}>
-                <motion.div variants={liVariant}>{navItem.navTitle}</motion.div>
+                <motion.div variants={liVariant} className="nav-menu-hover">{navItem.navTitle}</motion.div>
               </motion.li>
             ))}
           </motion.ul>
           <motion.div variants={fadeInVariant} className="contact text-putih">
-            <h5>+852 5650 2233</h5>
-            <h5>hi@designagency.com</h5>
+            <h5>amataraja@gmail.com</h5>
           </motion.div>
         </motion.div>
       </motion.nav>
