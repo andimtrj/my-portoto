@@ -24,6 +24,25 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: walkyr;
+  src: url(./assets/fonts/Walkyr.ttf);
+}
+.walkyr{
+  font-family: walkyr;
+  font-size: 250px;
+  height: 220px;
+}
+
+.walkyr-stroke{
+  color: transparent;
+  font-family: walkyr;
+  font-size: 250px;
+  height: 220px;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 3px;
+}
+
 body{
   background-color: #FEFBF6;
   color: #1e1e1e;
