@@ -1,14 +1,17 @@
-import Home from "../components/Home";
-import NewHome from "../components/NewHome";
+import Home from "../components/homeC/Home";
+import NewHome from "../components/homeC/Home"
 import Navbar from "../components/Navbar";
-import Spline from "@splinetool/react-spline";
+
+import PageTransition from "../components/PageTransition";
+import Footer from "../components/Footer";
 
 function HomePage() {
   return (
     <div>
+      <PageTransition/>
       <Navbar />
-      {/* <Home /> */}
-      <NewHome />
+      <NewHome/>
+      <Footer/>
     </div>
   );
 }

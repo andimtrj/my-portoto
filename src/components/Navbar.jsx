@@ -142,7 +142,7 @@ function Navbar() {
             </span>
           </motion.div>
         </div>
-        <motion.div variants={mobileMenuVariant} className="mobile-menu">
+        <motion.div variants={mobileMenuVariant} className="mobile-menu z-20">
           <motion.button
             variants={fadeInVariant}
             onClick={() => setMobileNavOpen(false)}
