@@ -13,7 +13,8 @@ export default {
       'coklatT': '#ECB159',
       'coklatG': '#B67352',
       'oren': '#FA6906',
-      'biru': '#09C3F8'
+      'biru': '#09C3F8',
+      'bg': '#FEFBF6'
     },
     extend: {},
   },

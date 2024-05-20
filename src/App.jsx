@@ -44,6 +44,13 @@ function App() {
               outerSize: 25,
               innerSize: 10
             }
+          },
+          {
+            target: '.btn',
+            options: {
+              outerSize: 25,
+              innerSize: 10
+            }
           }
         ]}
       />

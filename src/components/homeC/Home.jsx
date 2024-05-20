@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Layout from "../Layout"
 import Spline from "@splinetool/react-spline";
 import AboutH from "./AboutH";
 
@@ -32,7 +31,7 @@ const childVariants = {
 
 function NewHome() {
   return (
-    <div>
+    <div className="pt-24">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -56,11 +55,7 @@ function NewHome() {
         </motion.h1>
       </motion.div>
 
-      <Layout>
-        <AboutH/>
-      </Layout>
-      
-
+      <AboutH />
     </div>
   );
 }

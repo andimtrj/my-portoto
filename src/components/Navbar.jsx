@@ -121,7 +121,7 @@ function Navbar() {
   }
 
   return (
-    <main>
+    <main className="fixed w-full bg-bg z-30">
       <motion.nav
         initial="closed"
         animate={mobileNavOpen ? "opened" : "closed"}
