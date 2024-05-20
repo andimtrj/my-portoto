@@ -2,19 +2,17 @@ import { motion } from "framer-motion"
 
 const pageTransition = {
   hidden: {
-    opacity: 0,
     y: "-100%",
     transition: {
-      duration: 0.5,
+      duration: 1,
       ease: "easeInOut",
     },
   },
   visible: {
-    opacity: 1,
     y: "0%",
     transition: {
       delay: 1.1,
-      duration: 0.5,
+      duration: 2,
       ease: "easeInOut",
     },
   },
