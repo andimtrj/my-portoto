@@ -91,7 +91,7 @@ function AboutH() {
         </div>
 
         <motion.img
-          initial={{ opacity: 0, x: 120 }}
+          initial={{ opacity: 0, x: 45 }}
           whileInView={{
             opacity: 1,
             x: 0,

@@ -24,7 +24,7 @@ function PageTransition(){
 
   return(
     <motion.div
-        className={`w-full h-[100vh] bg-black flex absolute`}
+        className={`w-full h-[100vh] bg-black flex absolute z-30`}
         variants={pageTransition}
         initial="visible"
         animate="hidden"
