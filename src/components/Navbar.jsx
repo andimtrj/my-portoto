@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import "../style/navbar.scss";
-import { Cursor } from "react-creative-cursor";
 
 const MOBILE_NAV_ITEMS = [
   {
