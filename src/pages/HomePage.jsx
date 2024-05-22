@@ -1,14 +1,18 @@
-import Home from "../components/Home";
+import Home from "../components/homeC/Home"
 import Navbar from "../components/Navbar";
+import PageTransition from "../components/PageTransition";
+import Footer from "../components/Footer";
 
-function HomePage(){
+function HomePage() {
 
-  return(
+  return (
     <div>
-      <Navbar/>
+      <PageTransition/>
+      <Navbar />
       <Home/>
+      <Footer/>
     </div>
-  )
+  );
 }
 
 export default HomePage;

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 import "../style/navbar.scss";
 
@@ -7,27 +8,28 @@ const MOBILE_NAV_ITEMS = [
   {
     id: 0,
     navTitle: "home",
+    route: '/'
   },
   {
     id: 1,
-    navTitle: "showreel",
+    navTitle: "my works",
+    route: '/workspage'
   },
   {
     id: 2,
-    navTitle: "services",
+    navTitle: "about me",
   },
   {
     id: 3,
-    navTitle: "about",
-  },
-  {
-    id: 4,
     navTitle: "contact",
   },
 ];
 
+const linkedInUrl = "https://www.linkedin.com/in/andi-mataraja/"
+
 function Navbar() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const navigate = useNavigate();
 
   const hideNavItemsVariant = {
     opened: {
@@ -112,8 +114,14 @@ function Navbar() {
     },
   };
 
+  const handleClick = (route) => {
+    // setMobileNavOpen(false);
+
+    navigate(route)
+  }
+
   return (
-    <main>
+    <main className="fixed w-full bg-bg z-20">
       <motion.nav
         initial="closed"
         animate={mobileNavOpen ? "opened" : "closed"}
@@ -128,30 +136,39 @@ function Navbar() {
           <motion.div
             variants={hideNavItemsVariant}
             onClick={() => setMobileNavOpen(true)}
-            data-cursor-size="100px"
-            data-cursor-exclusion
-            data-cursor-stick="#stick-item"
           >
-            <span className="text-4xl material-symbols-outlined text-hitam">menu</span>
+            <span className="text-4xl material-symbols-outlined text-hitam">
+              menu
+            </span>
           </motion.div>
         </div>
-        <motion.div variants={mobileMenuVariant} className="mobile-menu">
+        <motion.div variants={mobileMenuVariant} className="mobile-menu z-20">
           <motion.button
             variants={fadeInVariant}
             onClick={() => setMobileNavOpen(false)}
           >
-            <span className="text-4xl material-symbols-outlined text-putih">close</span>
+            <span className="text-4xl material-symbols-outlined text-putih">
+              close
+            </span>
           </motion.button>
           <motion.ul variants={ulVariant} className="text-putih">
             {MOBILE_NAV_ITEMS.map((navItem) => (
-              <motion.li whileTap={{ scale: 0.95 }} key={navItem.id}>
-                <motion.div variants={liVariant}>{navItem.navTitle}</motion.div>
+              <motion.li whileTap={{ scale: 0.95 }} key={navItem.id} onClick={() => handleClick(navItem.route)}>
+                <motion.div
+                  variants={liVariant}
+                  className="nav-menu-hover desc-title hover:italic"
+                >
+                  {navItem.navTitle}
+                </motion.div>
               </motion.li>
             ))}
           </motion.ul>
-          <motion.div variants={fadeInVariant} className="contact text-putih">
-            <h5>+852 5650 2233</h5>
-            <h5>hi@designagency.com</h5>
+          <motion.div
+            variants={fadeInVariant}
+            className="contact text-putih desc gap-10"
+          >
+            <a className="cursor-default">amataraja@gmail.com</a>
+            <a href={linkedInUrl} className="no-underline hover:italic">LinkedIn</a>
           </motion.div>
         </motion.div>
       </motion.nav>
