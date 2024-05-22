@@ -13,9 +13,8 @@
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 3rem;
+  font-size: 4vw;
 }
-
 
 .desc{
   font-family: "Figtree", sans-serif;
@@ -36,15 +35,15 @@
 }
 .walkyr{
   font-family: walkyr;
-  font-size: 250px;
-  height: 220px;
+  font-size: 15.625rem;
+  height: 15.625rem;
 }
 
 .walkyr-stroke{
   color: transparent;
   font-family: walkyr;
-  font-size: 250px;
-  height: 220px;
+  font-size: 15.625rem;
+  height: 15.625rem;
   -webkit-text-stroke-color: black;
   -webkit-text-stroke-width: 3px;
 }

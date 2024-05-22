@@ -5,18 +5,9 @@ import HomePage from "./pages/HomePage";
 import WorksPage from "./pages/WorksPage";
 
 function App() {
+
   return (
     <>
-      {/* <Cursor
-        isGelly={false}
-        cursorSize={20}
-        gellyAnimationAmount={50}
-        animationDuration={0.5}
-        sizeAnimationEase={[0.165, 0.84, 0.44, 1]}
-        sizeAnimationDuration={0.35}
-        textAnimationEase={[0.165, 0.84, 0.44, 1]}
-        textAnimationDuration={0.4}
-      /> */}
       <AnimatedCursor
         showSystemCursor
         innerSize={0}
@@ -29,9 +20,7 @@ function App() {
         outerStyle={{
           mixBlendMode: "exclusion",
         }}
-        clickables={[
-          'span',
-          'li',
+        clickables={[  
           {
             target: '.nama-hover',
             options: {

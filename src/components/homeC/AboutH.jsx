@@ -50,7 +50,7 @@ function AboutH() {
                 transition: { duration: 0.5, ease: "easeOut" },
               }}
               viewport={{ margin: "-100px", once: true }}
-              className="desc text-xl text-justify"
+              className="desc md:text-[1.8vw] lg:text-xl text-justify"
             >
               Hello there, my name is Andi Mataraja. I am currently a
               sixth-semester student at Bina Nusantara University, where I am
@@ -68,7 +68,7 @@ function AboutH() {
                 transition: { duration: 0.7, ease: "easeOut" },
               }}
               viewport={{ margin: "-100px", once: true }}
-              className="desc text-xl text-justify"
+              className="desc md:text-[1.8vw] lg:text-xl text-justify"
             >
               I am an avid enthusiast of the arts, particularly visual arts and
               music. I see front-end development and UI/UX design as my way of
@@ -81,8 +81,17 @@ function AboutH() {
           </div>
           <div className="w-full">
             <motion.button
-              initial={{ opacity: 1 }}
+              initial={{ opacity: 0, y: 100 }}
               whileHover={{ backgroundColor: "#1e1e1e", color: "#FEFEFE" }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  ease: "easeOut",
+                  duration: 0.8,
+                },
+              }}
+              viewport={{ margin: "-10px", once: true }}
               className="desc border-2 border-hitam px-4 py-1 rounded-3xl btn"
             >
               Find out more
@@ -100,10 +109,10 @@ function AboutH() {
               duration: 0.8,
             },
           }}
-          viewport={{ margin: "-100px", once: true }}
+          viewport={{ margin: "-200px", once: true }}
           src={AboutMeImg}
           alt="AboutMeImg"
-          className="max-w-[30rem]"
+          className="md:w-[40vw] lg:w-[23vw] filter grayscale brightness-75 transition duration-1000 ease-in-out hover:grayscale-0 hover:brightness-110"
         />
       </div>
       {/* about me content */}
