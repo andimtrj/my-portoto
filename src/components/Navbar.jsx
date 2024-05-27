@@ -137,7 +137,7 @@ function Navbar() {
             variants={hideNavItemsVariant}
             onClick={() => setMobileNavOpen(true)}
           >
-            <span className="text-4xl material-symbols-outlined text-hitam">
+            <span className="text-4xl material-symbols-outlined text-hitam nav-menu-hover">
               menu
             </span>
           </motion.div>

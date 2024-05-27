@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Spline from "@splinetool/react-spline";
 import AboutH from "./AboutH";
 import ProjectH from "./ProjectH"
+import Scroll from "../../components/animations/SmoothScroll"
 
 
 const containerVariants = {
@@ -35,6 +36,7 @@ function Home() {
 
   return (
     <div className="pt-24">
+      {/* <Scroll/> */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
