@@ -1,5 +1,5 @@
 import { easeIn, motion } from "framer-motion";
-import AboutMeImg from "../../assets/aboutme.png";
+import AboutMeImg from "../../assets/img/aboutme.png";
 
 function AboutH() {
   const aboutMeText = "About Me ━ ";
@@ -106,7 +106,7 @@ function AboutH() {
             x: 0,
             transition: {
               ease: "easeOut",
-              duration: 0.8,
+              duration: 0.6,
             },
           }}
           viewport={{ margin: "-200px", once: true }}
