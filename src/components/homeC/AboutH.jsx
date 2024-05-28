@@ -1,5 +1,20 @@
-import { easeIn, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import AboutMeImg from "../../assets/img/aboutme.png";
+
+const reveal = {
+  hidden: {
+    opacity: 0,
+    y: 40
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: "easeIn",
+      duration: 0.5,
+    }
+  }
+}
 
 function AboutH() {
   const aboutMeText = "About Me ━ ";
@@ -31,24 +46,18 @@ function AboutH() {
         <div className="flex flex-col">
           <div className="desc-title text-3xl mb-5 max-w-[40rem] text-end">
             <motion.h3
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.4, ease: "easeOut" },
-              }}
+              variants={reveal}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ margin: "-100px", once: true }}
               className="mb-2"
             >
               Hi 🖐️
             </motion.h3>
             <motion.p
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.5, ease: "easeOut" },
-              }}
+              variants={reveal}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ margin: "-100px", once: true }}
               className="desc md:text-[1.8vw] lg:text-xl text-justify"
             >
@@ -61,12 +70,9 @@ function AboutH() {
           </div>
           <div className="desc-title text-3xl mb-5 max-w-[40rem] text-end">
             <motion.p
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.7, ease: "easeOut" },
-              }}
+              variants={reveal}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ margin: "-100px", once: true }}
               className="desc md:text-[1.8vw] lg:text-xl text-justify"
             >
@@ -81,18 +87,11 @@ function AboutH() {
           </div>
           <div className="w-full">
             <motion.button
-              initial={{ opacity: 0, y: 100 }}
-              whileHover={{ backgroundColor: "#1e1e1e", color: "#FEFEFE" }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  ease: "easeOut",
-                  duration: 0.8,
-                },
-              }}
+              variants={reveal}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ margin: "-10px", once: true }}
-              className="desc border-2 border-hitam px-4 py-1 rounded-3xl btn"
+              className="desc border-2 border-hitam px-4 py-1 rounded-3xl hover"
             >
               Find out more
             </motion.button>
@@ -100,13 +99,13 @@ function AboutH() {
         </div>
 
         <motion.img
-          initial={{ opacity: 0, x: 45 }}
+          initial={{ opacity: 0, x: 50 }}
           whileInView={{
             opacity: 1,
             x: 0,
             transition: {
               ease: "easeOut",
-              duration: 0.6,
+              duration: 0.8,
             },
           }}
           viewport={{ margin: "-200px", once: true }}

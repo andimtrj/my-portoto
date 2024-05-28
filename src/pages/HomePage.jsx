@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import PageTransition from "../components/PageTransition";
 import Footer from "../components/Footer";
 
+
 function HomePage() {
 
   return (
@@ -11,6 +12,7 @@ function HomePage() {
       <Navbar />
       <Home/>
       <Footer/>
+      
     </div>
   );
 }
