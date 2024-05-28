@@ -99,19 +99,19 @@ function AboutH() {
         </div>
 
         <motion.img
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 45 }}
           whileInView={{
             opacity: 1,
             x: 0,
             transition: {
               ease: "easeOut",
-              duration: 0.8,
+              duration: 0.2,
             },
           }}
           viewport={{ margin: "-200px", once: true }}
           src={AboutMeImg}
           alt="AboutMeImg"
-          className="md:w-[40vw] lg:w-[23vw] filter grayscale brightness-75 transition duration-1000 ease-in-out hover:grayscale-0 hover:brightness-110"
+          className="md:w-[37vw] lg:w-[23vw] filter grayscale brightness-75 transition duration-1000 ease-in-out hover:grayscale-0 hover:brightness-110"
         />
       </div>
       {/* about me content */}

@@ -1,13 +1,32 @@
 import ProjectL from "./ProjectL";
 import ProjectL2 from "./ProjectL2";
+import ProjectDetail from "./ProjectDetail"
 import project1 from "../../assets/img/project1.png";
 import project2 from "../../assets/img/project2.jpg";
 import project3 from "../../assets/img/project3.jpg";
 import project4 from "../../assets/img/project4.png";
 import project5 from "../../assets/img/project5.png";
 import project6 from "../../assets/img/project6.png";
+import React, { useState } from 'react';
+import { AnimatePresence } from "framer-motion";
+
+const projects = [
+  {
+    id: 1,
+    images: [project1, project2],
+    title: "Herb Shop"
+  },
+]
+
 
 function ProjectH() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState({ img: '', title: '' });
+
+  const handleImageClick = (img, title) => {
+    setModalContent({ img, title });
+    setModalOpen(true);
+  };
 
   return (
     <div className="px-[45px]">
@@ -17,6 +36,7 @@ function ProjectH() {
           img={project1}
           number="01"
           title="Herbs Shop"
+          onClick={handleImageClick}
         />
         <ProjectL
           img={project2}
@@ -48,6 +68,16 @@ function ProjectH() {
           title="Youtube Dashboard"
         />
       </div>
+      <AnimatePresence>
+        {modalOpen && (
+          <ProjectDetail
+            isOpen={modalOpen}
+            onClose={() => setModalOpen(false)}
+            img={modalContent.img}
+            title={modalContent.title}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }

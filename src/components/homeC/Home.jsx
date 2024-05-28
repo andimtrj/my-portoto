@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
-import Spline from "@splinetool/react-spline";
-import AboutH from "./AboutH";
-import ProjectH from "./ProjectH"
-import Scroll from "../../components/animations/SmoothScroll"
-
+// Home.jsx
+import React, { useRef } from 'react';
+import { motion } from 'framer-motion';
+import Spline from '@splinetool/react-spline';
+import AboutH from './AboutH';
+import ProjectH from './ProjectH';
 
 const containerVariants = {
   hidden: {
@@ -27,17 +27,21 @@ const childVariants = {
     y: 0,
     transition: {
       duration: 1.5,
-      ease: "easeOut",
+      ease: 'easeOut',
     },
   },
 };
 
 function Home() {
+  const aboutRef = useRef(null);
+  const projectRef = useRef(null);
+  const homeRef = useRef(null);
 
   return (
     <div className="pt-24">
-      {/* <Scroll/> */}
       <motion.div
+        id="home"
+        ref={homeRef}
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -47,7 +51,7 @@ function Home() {
           variants={childVariants}
           className="absolute w-full sm:h-[48vh] md:h-[68vh] lg:h-[80vh] z-10"
         >
-          <Spline scene="https://prod.spline.design/6BLCEgUJY241bIKh/scene.splinecode" className="md:w-1"/>
+          <Spline scene="https://prod.spline.design/6BLCEgUJY241bIKh/scene.splinecode" className="md:w-1" />
         </motion.div>
         <motion.h1 variants={childVariants} className="walkyr-stroke sm:text-[15vw] sm:h-[15vh] md:text-[15vw] md:h-[18vh] lg:text-[14vw] lg:h-[26vh]">
           MATARAJA
@@ -59,9 +63,12 @@ function Home() {
           MATARAJA
         </motion.h1>
       </motion.div>
-      <AboutH />
-
-      <ProjectH/>
+      <div id="about" ref={aboutRef}>
+        <AboutH />
+      </div>
+      <div id="projects" ref={projectRef}>
+        <ProjectH />
+      </div>
     </div>
   );
 }

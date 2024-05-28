@@ -1,6 +1,6 @@
 import Home from "../components/homeC/Home"
 import Navbar from "../components/Navbar";
-import PageTransition from "../components/PageTransition";
+import PageTransition from "../components/animations/PageTransition";
 import Footer from "../components/Footer";
 
 

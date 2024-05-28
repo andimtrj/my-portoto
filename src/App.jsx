@@ -2,7 +2,6 @@ import AnimatedCursor from "react-animated-cursor";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import WorksPage from "./pages/WorksPage";
 
 function App() {
 
@@ -16,7 +15,7 @@ function App() {
         outerAlpha={100}
         innerScale={0.2}
         outerScale={3}
-        trailingSpeed={13}
+        trailingSpeed={8}
         outerStyle={{
           mixBlendMode: "exclusion",
         }}
@@ -46,7 +45,6 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/workspage" element={<WorksPage />} />
         </Routes>
       </Router>
     </>
