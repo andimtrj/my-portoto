@@ -14,8 +14,8 @@ function App() {
         outerSize={20}
         color="255, 255, 255"
         outerAlpha={100}
-        innerScale={0.7}
-        outerScale={5}
+        innerScale={0.2}
+        outerScale={3}
         trailingSpeed={13}
         outerStyle={{
           mixBlendMode: "exclusion",
@@ -24,21 +24,21 @@ function App() {
           {
             target: '.nama-hover',
             options: {
-              outerSize: 50
+              outerSize: 25
             }
           },
           {
             target: '.nav-menu-hover',
             options: {
               outerSize: 25,
-              innerSize: 10
+              innerSize: 30
             }
           },
           {
-            target: '.btn',
+            target: '.hover',
             options: {
-              outerSize: 25,
-              innerSize: 10
+              outerScale: 25,
+              innerScale: 0.2
             }
           }
         ]}

@@ -8,7 +8,7 @@ function ProjectL({ img, number, title }) {
         <h5>{number}</h5>
         <h5>{title}</h5>
       </div>
-      <div className="overflow-hidden block flex-shrink-0 w-[20vw] h-[20vw]">
+      <div className="overflow-hidden block flex-shrink-0 w-[20vw] h-[20vw] hover cursor-pointer">
         <img
           src={img}
           alt=""

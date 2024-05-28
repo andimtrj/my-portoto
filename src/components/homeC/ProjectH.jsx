@@ -8,12 +8,6 @@ import project5 from "../../assets/img/project5.png";
 import project6 from "../../assets/img/project6.png";
 
 function ProjectH() {
-  const img1 = <img src={project1} alt="" className="w-full h-full object-cover filter grayscale"/>
-  const img2 = <img src={project2} alt="" className="w-full h-full object-cover filter grayscale"/>
-  const img3 = <img src={project3} alt="" className="w-full h-full object-cover filter grayscale"/>
-  const img4 = <img src={project4} alt="" className="w-full h-full object-cover filter grayscale"/>
-  const img5 = <img src={project5} alt="" className="w-full h-full object-cover filter grayscale"/>
-  const img6 = <img src={project6} alt="" className="w-full h-full object-cover filter grayscale"/>
 
   return (
     <div className="px-[45px]">

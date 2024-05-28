@@ -115,8 +115,6 @@ function Navbar() {
   };
 
   const handleClick = (route) => {
-    // setMobileNavOpen(false);
-
     navigate(route)
   }
 
@@ -125,7 +123,7 @@ function Navbar() {
       <motion.nav
         initial="closed"
         animate={mobileNavOpen ? "opened" : "closed"}
-        className="items-center justify-between"
+        className="items-center justify-between lg:py-[35px] px-[45px] md:py-[20px]"
       >
         <div className="logo-container">
           <motion.h1 variants={hideNavItemsVariant} className="desc-title">

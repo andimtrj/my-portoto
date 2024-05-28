@@ -4,7 +4,7 @@ import { useState } from "react";
 function ProjectL({ img, number, title }) {
   return (
     <div className="flex gap-5 w-full">
-      <div className="overflow-hidden block flex-shrink-0 w-[20vw] h-[20vw]">
+      <div className="overflow-hidden block flex-shrink-0 w-[20vw] h-[20vw] hover cursor-pointer">
         <img
           src={img}
           alt=""

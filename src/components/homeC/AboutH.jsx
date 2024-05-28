@@ -91,7 +91,7 @@ function AboutH() {
               initial="hidden"
               whileInView="visible"
               viewport={{ margin: "-10px", once: true }}
-              className="desc border-2 border-hitam px-4 py-1 rounded-3xl btn"
+              className="desc border-2 border-hitam px-4 py-1 rounded-3xl hover"
             >
               Find out more
             </motion.button>
