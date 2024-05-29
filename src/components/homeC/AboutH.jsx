@@ -20,7 +20,7 @@ function AboutH() {
   const aboutMeText = "About Me ━ ";
 
   return (
-    <div className="px-[45px]">
+    <div className="px-[45px] mb-52">
       {/* slider */}
       <div className="overflow-hidden whitespace-nowrap border-y-4 border-hitam mb-10">
         <div className="flex slider-font">
@@ -85,6 +85,26 @@ function AboutH() {
               development challenges.
             </motion.p>
           </div>
+          <div className="w-full">
+            <div className="w-full flex flex-col justify-center ">
+              <p className="desc-title md:text-[1.8vw] lg:text-xl text-center mb-2"> Here are tools that I'm familiar with 💻</p>
+              <div className="flex justify-evenly mb-1">
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">HTML</p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">CSS</p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">JavaScript</p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">Tailwind CSS</p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">Bootstrap</p>
+              </div>
+              <div className="flex justify-between">
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">React Js</p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">Vue Js</p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">Laravel</p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">MySQL</p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">Figma</p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">Git</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <motion.img
@@ -100,7 +120,7 @@ function AboutH() {
           viewport={{ margin: "-200px", once: true }}
           src={AboutMeImg}
           alt="AboutMeImg"
-          className="md:w-[37vw] lg:w-[23vw] filter grayscale brightness-75 transition duration-1000 ease-in-out hover:grayscale-0 hover:brightness-110"
+          className="md:w-[37vw] lg:w-[21.5vw] filter grayscale brightness-75 transition duration-1000 ease-in-out hover:grayscale-0 hover:brightness-110"
         />
       </div>
       {/* about me content */}

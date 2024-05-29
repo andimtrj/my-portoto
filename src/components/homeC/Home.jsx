@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Spline from '@splinetool/react-spline';
 import AboutH from './AboutH';
 import ProjectH from './ProjectH';
+import ContactH from './ContactH';
 
 const containerVariants = {
   hidden: {
@@ -35,6 +36,7 @@ function Home() {
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
   const homeRef = useRef(null);
+  const contactRef = useRef(null);
 
   return (
     <div className="pt-24">
@@ -44,7 +46,7 @@ function Home() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="flex flex-col justify-center text-center h-fit md:mb-[40vh] lg:mb-44"
+        className="flex flex-col justify-center text-center h-fit md:mb-[40vh] lg:mb-60"
       >
         <motion.div
           variants={childVariants}
@@ -67,6 +69,9 @@ function Home() {
       </div>
       <div id="projects" ref={projectRef}>
         <ProjectH />
+      </div>
+      <div id='contact' ref={contactRef}>
+        <ContactH/>
       </div>
     </div>
   );

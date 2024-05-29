@@ -12,10 +12,10 @@ function ProjectDetail({ isOpen, onClose, image, title, info, role, desc, link }
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: "100%", opacity: 0.5 }}
       transition={{ duration: 1.1, ease: [0.74, 0, 0.19, 1.02] }}
-      className="fixed inset-0 bg-hitam z-50 w-full flex px-[45px] gap-5"
+      className="fixed inset-0 bg-hitam z-50 w-full flex px-[45px] gap-5 sm:flex-col sm:justify-center md:flex-col md:justify-center lg:flex-row"
     >
-      <div className="h-full flex items-center">
-        <div className="w-[50vw] h-fit overflow-hidden block flex-shrink-0">
+      <div className="lg:h-full md:h-fit md:w-full md:justify-center sm:h-fit sm:w-full sm:justify-center flex items-center">
+        <div className="lg:w-[50vw] md:w-fit sm:w-fit h-fit overflow-hidden block flex-shrink-0">
           <img src={image} alt={title} className="w-full object-cover" />
         </div>
       </div>
@@ -36,10 +36,10 @@ function ProjectDetail({ isOpen, onClose, image, title, info, role, desc, link }
         </div>
       </div>
 
-      <div className="py-4">
+      <div className="py-4 lg:w-fit md:w-full md:flex md:justify-end sm:w-full sm:flex sm:justify-end">
         <span
           onClick={onClose}
-          className="desc-title text-putih cursor-pointer text-3xl"
+          className="desc-title text-putih cursor-pointer text-3xl w-fit"
         >
           close
         </span>
