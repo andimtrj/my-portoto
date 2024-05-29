@@ -1,4 +1,3 @@
-// Home.jsx
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import Spline from '@splinetool/react-spline';
