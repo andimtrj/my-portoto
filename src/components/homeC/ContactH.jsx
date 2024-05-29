@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 function ContactH() {
   return (
     <div className="px-[45px]">
@@ -14,8 +16,12 @@ function ContactH() {
         <div className="flex justify-end sm:mt-5">
           <div className="border-l sm:border-x border-hitam flex flex-col desc text-xl gap-4 lg:py-5 lg:px-32 md:py-5 md:px-10 sm:py-2 sm:px-5 sm:text-center">
             <h3 className="desc-title">Menu</h3>
-            <a href="">Home</a>
-            <a href="">About</a>
+            <motion.a href=""
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.2 }}
+            >Home</motion.a>
+            <a href=""
+            >About</a>
             <a href="">My Works</a>
           </div>
           <div className="border-l sm:border-none border-hitam flex flex-col desc text-xl gap-4 ;g:py-5 lg:px-32 md:py-5 md:px-10 sm:py-2 sm:px-5 sm:text-center">

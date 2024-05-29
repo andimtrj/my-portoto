@@ -4,7 +4,7 @@ import AboutMeImg from "../../assets/img/aboutme.png";
 const reveal = {
   hidden: {
     opacity: 0,
-    y: 40
+    y: 40,
   },
   visible: {
     opacity: 1,
@@ -12,9 +12,9 @@ const reveal = {
     transition: {
       ease: "easeIn",
       duration: 0.5,
-    }
-  }
-}
+    },
+  },
+};
 
 function AboutH() {
   const aboutMeText = "About Me ━ ";
@@ -87,22 +87,65 @@ function AboutH() {
           </div>
           <div className="w-full">
             <div className="w-full flex flex-col justify-center ">
-              <p className="desc-title md:text-[1.8vw] lg:text-xl text-center mb-2"> Here are tools that I'm familiar with 💻</p>
-              <div className="flex justify-evenly mb-1">
-                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">HTML</p>
-                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">CSS</p>
-                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">JavaScript</p>
-                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">Tailwind CSS</p>
-                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">Bootstrap</p>
-              </div>
-              <div className="flex justify-between">
-                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">React Js</p>
-                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">Vue Js</p>
-                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">Laravel</p>
-                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">MySQL</p>
-                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">Figma</p>
-                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">Git</p>
-              </div>
+              <motion.p
+                className="desc-title md:text-[1.8vw] lg:text-xl text-center mb-2"
+                variants={reveal}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ margin: "-100px", once: true }}
+              >
+                {" "}
+                Here are tools that I'm familiar with 💻
+              </motion.p>
+              <motion.div
+                className="flex justify-evenly mb-1"
+                variants={reveal}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ margin: "-100px", once: true }}
+              >
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">
+                  HTML
+                </p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">
+                  CSS
+                </p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">
+                  JavaScript
+                </p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">
+                  Tailwind CSS
+                </p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">
+                  Bootstrap
+                </p>
+              </motion.div>
+              <motion.div
+                className="flex justify-between"
+                variants={reveal}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ margin: "-100px", once: true }}
+              >
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">
+                  React Js
+                </p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">
+                  Vue Js
+                </p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">
+                  Laravel
+                </p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">
+                  MySQL
+                </p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">
+                  Figma
+                </p>
+                <p className="desc md:text-[1.8vw] lg:text-xl text-justify">
+                  Git
+                </p>
+              </motion.div>
             </div>
           </div>
         </div>
