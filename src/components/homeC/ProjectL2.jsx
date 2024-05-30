@@ -36,7 +36,7 @@ function ProjectL({ img, number, title, onClick }) {
           className="w-full h-full object-cover filter grayscale transition duration-1000 ease-in-out hover:grayscale-0"
         />
       </div>
-      <div className="justify-between flex flex-col sm:text-sm md:text-md lg:text-xl desc-title w-[20vw] h-[20vw] text-left">
+      <div className="justify-between flex flex-col sm:text-sm md:text-md lg:text-xl desc-title w-[20vw] h-[20vw] text-left phone:w-full">
         <motion.h5 variants={itemV} viewport={{ once: true, margin: "-100px" }}>
           {number}
         </motion.h5>

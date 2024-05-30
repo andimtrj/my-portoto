@@ -12,17 +12,17 @@ function ProjectDetail({ isOpen, onClose, image, title, info, role, desc, link }
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: "100%", opacity: 0.5 }}
       transition={{ duration: 1.1, ease: [0.74, 0, 0.19, 1.02] }}
-      className="fixed inset-0 bg-hitam z-50 w-full flex px-[45px] gap-5 sm:flex-col sm:justify-center md:flex-col md:justify-center lg:flex-row"
+      className="fixed inset-0 bg-hitam z-50 w-full flex px-[45px] gap-5 sm:flex-col sm:justify-center md:flex-col md:justify-center lg:flex-row phone:flex-col phone:justify-center"
     >
-      <div className="lg:h-full md:h-fit md:w-full md:justify-center sm:h-fit sm:w-full sm:justify-center flex items-center">
-        <div className="lg:w-[50vw] md:w-fit sm:w-fit h-fit overflow-hidden block flex-shrink-0">
+      <div className="lg:h-full md:h-fit md:w-full md:justify-center sm:h-fit sm:w-full sm:justify-center flex items-center phone:h-fit phone:w-full phone:justify-center">
+        <div className="lg:w-[50vw] md:w-fit sm:w-fit h-fit overflow-hidden block flex-shrink-0 phone:w-fit">
           <img src={image} alt={title} className="w-full object-cover" />
         </div>
       </div>
 
       <div className="py-4 flex items-center">
         <div className="flex flex-col ">
-          <h1 className="desc-title text-putih text-[2vw]">{title}</h1>
+          <h1 className="desc-title text-putih lg:text-[2vw] md:text-[5vw] sm:text-[5vw] phone:text-[5vw]">{title}</h1>
           <p className="desc text-putih text-justify">{info}</p>
           <p className="desc text-putih text-justify">{role}</p>
           <div className="flex flex-col mt-2">

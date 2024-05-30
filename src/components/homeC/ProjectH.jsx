@@ -85,8 +85,8 @@ function ProjectH() {
   };
 
   return (
-    <div className="px-[45px] mb-52">
-      <h1 className="title md:text-[4vw] lg:text-[4vw]">
+    <div className="lg:px-[45px] md:px-[45px] sm:px-[45px] phone:px-5 mb-52">
+      <h1 className="title md:text-[4vw] lg:text-[4vw] sm:text-[10vw] phone:text-[10vw]">
         <StaggerText
           staggerType="letter"
           staggerDuration={0.8}
@@ -98,7 +98,7 @@ function ProjectH() {
         </StaggerText>
       </h1>
 
-      <div className="border-y-2 border-hitam flex justify-between py-5">
+      <div className="border-y-2 border-hitam flex justify-between py-5 phone:flex-col phone:gap-5 lg:flex-row md:flex-row sm:flex-row">
         <ProjectL
           img={project1}
           number="01"
@@ -129,8 +129,9 @@ function ProjectH() {
             )
           }
         />
+        
       </div>
-      <div className="border-b-2 border-hitam flex justify-between py-5">
+      <div className="border-b-2 border-hitam flex justify-between py-5 phone:flex-col phone:gap-5 lg:flex-row md:flex-row sm:flex-row">
         <ProjectL2
           img={project3}
           number="03"
@@ -162,7 +163,7 @@ function ProjectH() {
           }
         />
       </div>
-      <div className="border-b-2 border-hitam flex justify-between py-5">
+      <div className="border-b-2 border-hitam flex justify-between py-5 phone:flex-col phone:gap-5 lg:flex-row md:flex-row sm:flex-row">
         <ProjectL
           img={project5}
           number="05"

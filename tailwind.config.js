@@ -2,6 +2,7 @@
 import colors from 'tailwindcss/colors';
 
 
+
 export default {
 
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
@@ -15,6 +16,12 @@ export default {
       'oren': '#FA6906',
       'biru': '#09C3F8',
       'bg': '#FEFBF6'
+    },
+    screens: {
+      'lg' : '1024px',
+      'md' : '768px',
+      'sm': '640px',
+      'phone': '350px'
     },
     extend: {},
   },

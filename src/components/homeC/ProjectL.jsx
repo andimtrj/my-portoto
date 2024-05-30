@@ -18,13 +18,13 @@ const itemV = {
 function ProjectL({ img, number, title, onClick }) {
   return (
     <motion.div
-      className="flex gap-5 w-full"
+      className="flex gap-5 w-full phone:justify-between"
       variants={containerV}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <div className="justify-between flex flex-col sm:text-sm md:text-md lg:text-xl desc-title w-[20vw] h-[20vw] text-right">
+      <div className="justify-between flex flex-col sm:text-sm md:text-md lg:text-xl desc-title w-[20vw] h-[20vw] text-right phone:w-full">
         <motion.h5 variants={itemV} viewport={{ once: true, margin: "-100px" }}>
           {number}
         </motion.h5>

@@ -20,7 +20,7 @@ function AboutH() {
   const aboutMeText = "About Me ━ ";
 
   return (
-    <div className="px-[45px] mb-52">
+    <div className="px-[45px] mb-52 phone:px-5">
       {/* slider */}
       <div className="overflow-hidden whitespace-nowrap border-y-4 border-hitam mb-10">
         <div className="flex slider-font">
@@ -42,7 +42,7 @@ function AboutH() {
       {/* slider */}
 
       {/* about me content */}
-      <div className="flex justify-end mb-10 gap-10">
+      <div className="flex justify-end mb-10 gap-10 sm:flex-col lg:flex-row md:flex-row phone:flex-col">
         <motion.div
           className="flex flex-col"
           variants={containerV}
@@ -50,7 +50,7 @@ function AboutH() {
           whileInView="visible"
           viewport={{ margin: "-100px", once: true }}
         >
-          <div className="desc-title text-3xl mb-5 max-w-[40rem] text-end">
+          <div className="desc-title lg:text-3xl mb-5 max-w-[40rem] text-end">
             <motion.h3 variants={itemsV} className="mb-2">
               Hi 🖐️
             </motion.h3>
@@ -65,7 +65,7 @@ function AboutH() {
               Development and UI/UX Design.
             </motion.p>
           </div>
-          <div className="desc-title text-3xl mb-5 max-w-[40rem] text-end">
+          <div className="desc-title lg:text-3xl mb-5 max-w-[40rem] text-end">
             <motion.p
               variants={itemsV}
               className="desc md:text-[1.8vw] lg:text-xl text-justify"
@@ -85,7 +85,6 @@ function AboutH() {
                 className="desc-title md:text-[1.8vw] lg:text-xl text-center mb-2"
                 variants={itemsV}
               >
-                {" "}
                 Here are tools that I'm familiar with 💻
               </motion.p>
               <motion.div
@@ -131,22 +130,23 @@ function AboutH() {
             </div>
           </div>
         </motion.div>
-
-        <motion.img
-          initial={{ opacity: 0, x: 45 }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: {
-              ease: "easeOut",
-              duration: 0.2,
-            },
-          }}
-          viewport={{ margin: "-200px", once: true }}
-          src={AboutMeImg}
-          alt="AboutMeImg"
-          className="md:w-[37vw] lg:w-[21.5vw] filter grayscale brightness-75 transition duration-1000 ease-in-out hover:grayscale-0 hover:brightness-110"
-        />
+        <div className="flex justify-center">
+          <motion.img
+            initial={{ opacity: 0, x: 45 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                ease: "easeOut",
+                duration: 0.2,
+              },
+            }}
+            viewport={{ margin: "-200px", once: true }}
+            src={AboutMeImg}
+            alt="AboutMeImg"
+            className="md:w-[37vw] lg:w-[21.5vw] sm:w-[60vw] filter grayscale brightness-75 transition duration-1000 ease-in-out hover:grayscale-0 hover:brightness-110"
+          />
+        </div>
       </div>
       {/* about me content */}
     </div>

@@ -135,11 +135,11 @@ function Navbar() {
   };
 
   return (
-    <main className="fixed w-full bg-bg z-20">
+    <main className="lg:fixed md:fixed sm:fixed w-full phone:static bg-bg z-20">
       <motion.nav
         initial="closed"
         animate={mobileNavOpen ? 'opened' : 'closed'}
-        className="items-center justify-between lg:py-[35px] px-[45px] md:py-[20px]"
+        className="items-center justify-between lg:py-[35px] md:px-[45px] lg:px-[45px] sm:px-[45px] sm: md:py-[20px] sm:py-[20px] phone:px-5 phone:py-2"
       >
         <div className="logo-container">
           <motion.h1 variants={hideNavItemsVariant} className="desc-title">
