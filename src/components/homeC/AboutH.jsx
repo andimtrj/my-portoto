@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
 import AboutMeImg from "../../assets/img/aboutme.png";
 
-const reveal = {
-  hidden: {
-    opacity: 0,
-    y: 40,
-  },
+const containerV = {
+  hidden: { opacity: 1 },
   visible: {
     opacity: 1,
-    y: 0,
     transition: {
-      ease: "easeIn",
-      duration: 0.5,
+      staggerChildren: 0.2,
     },
   },
+};
+
+const itemsV = {
+  hidden: { y: "70%", opacity: 0 },
+  visible: { y: 0, transition: { duration: 0.3 }, opacity: 1 },
 };
 
 function AboutH() {
@@ -43,22 +43,19 @@ function AboutH() {
 
       {/* about me content */}
       <div className="flex justify-end mb-10 gap-10">
-        <div className="flex flex-col">
+        <motion.div
+          className="flex flex-col"
+          variants={containerV}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ margin: "-100px", once: true }}
+        >
           <div className="desc-title text-3xl mb-5 max-w-[40rem] text-end">
-            <motion.h3
-              variants={reveal}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ margin: "-100px", once: true }}
-              className="mb-2"
-            >
+            <motion.h3 variants={itemsV} className="mb-2">
               Hi 🖐️
             </motion.h3>
             <motion.p
-              variants={reveal}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ margin: "-100px", once: true }}
+              variants={itemsV}
               className="desc md:text-[1.8vw] lg:text-xl text-justify"
             >
               Hello there, my name is Andi Mataraja. I am currently a
@@ -70,10 +67,7 @@ function AboutH() {
           </div>
           <div className="desc-title text-3xl mb-5 max-w-[40rem] text-end">
             <motion.p
-              variants={reveal}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ margin: "-100px", once: true }}
+              variants={itemsV}
               className="desc md:text-[1.8vw] lg:text-xl text-justify"
             >
               I am an avid enthusiast of the arts, particularly visual arts and
@@ -89,20 +83,14 @@ function AboutH() {
             <div className="w-full flex flex-col justify-center ">
               <motion.p
                 className="desc-title md:text-[1.8vw] lg:text-xl text-center mb-2"
-                variants={reveal}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ margin: "-100px", once: true }}
+                variants={itemsV}
               >
                 {" "}
                 Here are tools that I'm familiar with 💻
               </motion.p>
               <motion.div
                 className="flex justify-evenly mb-1"
-                variants={reveal}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ margin: "-100px", once: true }}
+                variants={itemsV}
               >
                 <p className="desc md:text-[1.8vw] lg:text-xl text-justify">
                   HTML
@@ -120,13 +108,7 @@ function AboutH() {
                   Bootstrap
                 </p>
               </motion.div>
-              <motion.div
-                className="flex justify-between"
-                variants={reveal}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ margin: "-100px", once: true }}
-              >
+              <motion.div className="flex justify-between" variants={itemsV}>
                 <p className="desc md:text-[1.8vw] lg:text-xl text-justify">
                   React Js
                 </p>
@@ -148,7 +130,7 @@ function AboutH() {
               </motion.div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         <motion.img
           initial={{ opacity: 0, x: 45 }}

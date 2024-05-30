@@ -9,6 +9,7 @@ import project5 from "../../assets/img/project5.png";
 import project6 from "../../assets/img/project6.png";
 import React, { useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import StaggerText from "react-stagger-text";
 
 const projects = [
   {
@@ -85,7 +86,18 @@ function ProjectH() {
 
   return (
     <div className="px-[45px] mb-52">
-      <h1 className="title md:text-[4vw] lg:text-[4vw]">My Works</h1>
+      <h1 className="title md:text-[4vw] lg:text-[4vw]">
+        <StaggerText
+          staggerType="letter"
+          staggerDuration={0.8}
+          staggerDelay={0.1}
+          startDelay={0}
+          shouldStart="false"
+        >
+          My Works
+        </StaggerText>
+      </h1>
+
       <div className="border-y-2 border-hitam flex justify-between py-5">
         <ProjectL
           img={project1}
