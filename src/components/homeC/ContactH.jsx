@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import StaggerText from "react-stagger-text";
-import CV from "../../assets/ANDI_MATARAJA_CV.pdf"
 
 const MOBILE_NAV_ITEMS = [
   {
@@ -133,6 +132,64 @@ function ContactH() {
           </p>
         </div>
         <div className="flex justify-end sm:mt-5">
+          <div className="border-x border-hitam ">
+            <motion.div
+              className="flex flex-col desc-title lg:text-xl gap-4 lg:py-5 lg:px-20 md:py-5 md:px-10 sm:py-2 sm:px-5 sm:text-center phone:px-5 phone:py-2 phone:text-center"
+              variants={itemsV}
+            >
+              <h3 className="thicker">Social</h3>
+              <motion.a
+                href={links[1].url}
+                variants={aHover}
+                whileHover="hover"
+              >
+                Instagram
+              </motion.a>
+              <motion.a
+                href={links[2].url}
+                variants={aHover}
+                whileHover="hover"
+              >
+                Youtube
+              </motion.a>
+              <motion.a
+                href={links[3].url}
+                variants={aHover}
+                whileHover="hover"
+              >
+                Behance
+              </motion.a>
+              <motion.a
+                href={links[4].url}
+                variants={aHover}
+                whileHover="hover"
+              >
+                Github
+              </motion.a>
+            </motion.div>
+          </div>
+          <div className="border-l sm:border-none border-hitam ">
+            <motion.div
+              className="flex flex-col desc-title lg:text-xl gap-4 lg:py-5 lg:px-20 md:py-5 md:px-10 sm:py-2 sm:px-5 sm:text-center phone:px-5 phone:py-2 phone:text-center"
+              variants={itemsV}
+            >
+              <h3 className="thicker">Contact</h3>
+              <motion.a
+                href={links[5].url}
+                variants={aHover}
+                whileHover="hover"
+              >
+                Email
+              </motion.a>
+              <motion.a
+                href={links[0].url}
+                variants={aHover}
+                whileHover="hover"
+              >
+                LinkedIn
+              </motion.a>
+            </motion.div>
+          </div>
           <div className="border-l sm:border-x border-hitam desc ">
             <motion.div
               className="flex flex-col lg:text-xl gap-4 lg:py-5 lg:px-20 md:py-5 md:px-10 sm:py-2 sm:px-5 sm:text-center phone:px-5 phone:py-2 phone:text-center"
@@ -150,43 +207,6 @@ function ContactH() {
                   </motion.div>
                 </a>
               ))}
-            </motion.div>
-          </div>
-          <div className="border-l sm:border-none border-hitam ">
-            <motion.div
-              className="flex flex-col desc-title lg:text-xl gap-4 lg:py-5 lg:px-20 md:py-5 md:px-10 sm:py-2 sm:px-5 sm:text-center phone:px-5 phone:py-2 phone:text-center"
-              variants={itemsV}
-            >
-              <h3 className="thicker">Contact</h3>
-              <motion.a href={links[5].url} variants={aHover} whileHover="hover">
-                Email
-              </motion.a>
-              <motion.a href={links[0].url} variants={aHover} whileHover="hover">
-                LinkedIn
-              </motion.a>
-              <motion.a href={CV} variants={aHover} whileHover="hover">
-                My CV
-              </motion.a>
-            </motion.div>
-          </div>
-          <div className="border-l border-hitam ">
-            <motion.div
-              className="flex flex-col desc-title lg:text-xl gap-4 lg:py-5 lg:px-20 md:py-5 md:px-10 sm:py-2 sm:px-5 sm:text-center phone:px-5 phone:py-2 phone:text-center"
-              variants={itemsV}
-            >
-              <h3 className="thicker">Social</h3>
-              <motion.a href={links[1].url} variants={aHover} whileHover="hover">
-                Instagram
-              </motion.a>
-              <motion.a href={links[2].url} variants={aHover} whileHover="hover">
-                Youtube
-              </motion.a>
-              <motion.a href={links[3].url} variants={aHover} whileHover="hover">
-                Behance
-              </motion.a>
-              <motion.a href={links[4].url} variants={aHover} whileHover="hover">
-                Github
-              </motion.a>
             </motion.div>
           </div>
         </div>
