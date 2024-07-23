@@ -10,19 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-hook/mouse-position": "^4.1.3",
-    "@splinetool/react-spline": "^2.2.6",
-    "@splinetool/runtime": "^1.3.2",
-    "@vercel/speed-insights": "^1.0.11",
     "framer-motion": "^11.0.24",
     "react": "^18.2.0",
     "react-animated-cursor": "^2.11.2",
-    "react-bootstrap": "^2.10.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
-    "react-stagger-text": "^1.1.0",
-    "smooth-scrollbar": "^8.8.4",
-    "styled-components": "^6.1.11"
+    "react-stagger-text": "^1.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",

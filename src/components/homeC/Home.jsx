@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import Spline from "@splinetool/react-spline";
 import AboutH from "./AboutH";
 import ProjectH from "./ProjectH";
 import ContactH from "./ContactH";
@@ -54,15 +53,6 @@ function Home() {
         animate="visible"
         className="flex flex-col justify-center text-center h-fit md:mb-[10vh] lg:mb-60 sm:mb-[15vh]"
       >
-        <motion.div
-          variants={childVariants}
-          className="absolute w-full sm:h-[48vh] md:h-[68vh] lg:h-[80vh] phone:h-[28vh] z-10"
-        >
-          <Spline
-            scene="https://prod.spline.design/6BLCEgUJY241bIKh/scene.splinecode"
-            className="md:w-1"
-          />
-        </motion.div>
         <motion.h1
           variants={childVariants}
           className="walkyr-stroke sm:text-[15vw] sm:h-[15vh] md:text-[15vw] md:h-[18vh] lg:text-[14vw] lg:h-[26vh] phone:text-[15vw] phone:h-[10vh]"

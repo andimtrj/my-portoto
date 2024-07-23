@@ -132,7 +132,7 @@ function ContactH() {
             </StaggerText>
           </p>
         </div>
-        <div className="flex justify-end sm:mt-5">
+        <div className="flex justify-end sm:mt-5 phone:mt-10">
           <div className="border-l sm:border-x border-hitam desc ">
             <motion.div
               className="flex flex-col lg:text-xl gap-4 lg:py-5 lg:px-20 md:py-5 md:px-10 sm:py-2 sm:px-5 sm:text-center phone:px-5 phone:py-2 phone:text-center"
