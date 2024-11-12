@@ -163,7 +163,7 @@ function HomePage() {
 <path d="M78.8726 82.8815L83.3288 79.3919C83.6227 79.1618 83.2099 78.7543 82.9191 78.9822L78.4629 82.471C78.169 82.7011 78.581 83.1086 78.8726 82.8815Z" fill="black"/>
 <path d="M78.9007 85.8008C78.6107 85.5706 78.1971 85.9811 78.491 86.2105L82.4685 89.3218C82.7593 89.5519 83.172 89.1415 82.8782 88.9113L78.9007 85.8008Z" fill="black"/>
 </svg>
-      <h1 className="text-5xl">Under Construction</h1>
+      <h1 className="text-5xl text-center">Under Construction</h1>
     </div>
   );
 }
