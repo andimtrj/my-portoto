@@ -12,7 +12,6 @@ function HomePage() {
       <Navbar />
       <Home/>
       <Footer/>
-      
     </div>
   );
 }
