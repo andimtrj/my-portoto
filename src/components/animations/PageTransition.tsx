@@ -1,5 +1,10 @@
 import { motion, useAnimation } from "framer-motion";
 
+const transition = {
+  duration: 0.8,
+  ease: [0, 0.71, 0.2, 1.01],
+};
+
 const pageTransition = {
   hidden: {
     y: "-100%",
@@ -13,7 +18,7 @@ const pageTransition = {
     transition: {
       delay: 1.1,
       duration: 2,
-      ease: "easeInOut",
+      ease: transition,
     },
   },
 };
