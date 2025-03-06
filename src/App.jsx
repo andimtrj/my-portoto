@@ -45,8 +45,8 @@ function App() {
       />
       <Router>
         <Routes>
-          {/* <Route path="/" element={<HomePage />} /> */}
-          <Route path="/" element={<UnderMaintenance />} />
+          <Route path="/" element={<HomePage />} />
+          {/* <Route path="/" element={<UnderMaintenance />} /> */}
         </Routes>
       </Router>
     </>
