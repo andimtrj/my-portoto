@@ -34,7 +34,7 @@ function Home() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center pb-[2vw] -mt-[6vw]">
-        <img src={arrow} alt="" className="w-[2vw] mb-[1vw]" />
+        <img src={arrow} alt="" className="w-[1.5vw] mb-[1vw]" />
         <p className="raleway-black text-[1vw]">SCROLL</p>
       </div>
     </div>
