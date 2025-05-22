@@ -1,4 +1,3 @@
-import React from "react";
 import dec1 from "../assets/decoration1.svg";
 import dec2 from "../assets/decoration2.svg";
 import dec3 from "../assets/decoration3.svg";
@@ -6,7 +5,7 @@ import arrow from "../assets/arrow.svg";
 
 function Home() {
   return (
-    <div className="flex flex-col flex-1">
+    <div className="flex flex-col flex-1 h-screen">
       <div className="flex flex-col uppercase text-[10vw] justify-center items-center grow">
         <div className="flex gap-[5vw] relative">
           <div className="flex relative">
@@ -34,9 +33,9 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center pb-[2vw] -mt-[4vw]">
+      <div className="flex flex-col items-center justify-center pb-[2vw] -mt-[6vw]">
         <img src={arrow} alt="" className="w-[2vw] mb-[1vw]" />
-        <p className="raleway-black text-lg">SCROLL</p>
+        <p className="raleway-black text-[1vw]">SCROLL</p>
       </div>
     </div>
   );
