@@ -8,6 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-cream: #f6f5f1;
+  --color-charcoal: #212121;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   /* Map Tailwind's generic serif to PT Serif */

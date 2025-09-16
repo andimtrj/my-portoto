@@ -2,9 +2,10 @@
 import { motion, AnimatePresence } from "motion/react";
 import React, { useState, useEffect } from "react";
 
-export default function WelcomeAnimation() {
+export default function WelcomeAnimation({ onComplete }) {
   const [showFirst, setShowFirst] = useState(true);
   const [showSecond, setShowSecond] = useState(false);
+  const [exitSecond, setExitSecond] = useState(false);
 
   useEffect(() => {
     // After 3 seconds, hide first section and show second
@@ -13,10 +14,32 @@ export default function WelcomeAnimation() {
       setTimeout(() => {
         setShowSecond(true);
       }, 450); // Wait for exit animation to complete (400ms + buffer)
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    // After the second animation displays, start exit animation then trigger page transition
+    if (showSecond && !exitSecond) {
+      const exitTimer = setTimeout(() => {
+        setExitSecond(true);
+      }, 2000);
+
+      return () => clearTimeout(exitTimer);
+    }
+  }, [showSecond, exitSecond]);
+
+  useEffect(() => {
+    // After second section exits, trigger page transition
+    if (exitSecond) {
+      const completeTimer = setTimeout(() => {
+        onComplete?.();
+      }, 800); // Wait longer for exit animation to complete (0.7s duration + buffer)
+
+      return () => clearTimeout(completeTimer);
+    }
+  }, [exitSecond, onComplete]);
 
   const containerVariants = {
     hidden: {
@@ -25,14 +48,15 @@ export default function WelcomeAnimation() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.08,
+        staggerChildren: 0.1,
         delayChildren: 0.1,
       },
     },
     exit: {
       opacity: 0,
       transition: {
-        staggerChildren: 0.03,
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
         staggerDirection: -1,
       },
     },
@@ -52,14 +76,14 @@ export default function WelcomeAnimation() {
     exit: {
       y: "100%",
       transition: {
-        duration: 0.4,
-        ease: [0.55, 0.085, 0.68, 0.53],
+        duration: 0.7,
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
   };
 
   return (
-    <div className="h-screen flex items-end p-28">
+    <div className="h-screen flex items-end p-28 bg-cream text-charcoal">
       <AnimatePresence mode="wait">
         {showFirst && (
           <motion.div
@@ -97,7 +121,7 @@ export default function WelcomeAnimation() {
             className="flex flex-col"
             variants={containerVariants}
             initial="hidden"
-            animate="visible"
+            animate={exitSecond ? "exit" : "visible"}
             exit="exit"
           >
             <div className="flex gap-3">
@@ -127,7 +151,7 @@ export default function WelcomeAnimation() {
               </div>
             </div>
 
-            <div className="flex gap-3">
+            <div className="flex gap-3 -mt-7">
               <div className="overflow-hidden py-4">
                 <motion.h2
                   className="font-pt-serif text-7xl font-black"
